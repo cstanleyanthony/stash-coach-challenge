@@ -16,6 +16,7 @@
 		1F19A35925795948008225F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A35725795948008225F3 /* LaunchScreen.storyboard */; };
 		1F19A36425795948008225F3 /* StashCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36325795948008225F3 /* StashCoachTests.swift */; };
 		1F19A36F25795948008225F3 /* StashCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36E25795948008225F3 /* StashCoachUITests.swift */; };
+		1F19A3C22579958D008225F3 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A3C12579958D008225F3 /* achievements.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1F19A36A25795948008225F3 /* StashCoachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F19A36E25795948008225F3 /* StashCoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachUITests.swift; sourceTree = "<group>"; };
 		1F19A37025795948008225F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F19A3C12579958D008225F3 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = achievements.json; path = "../../../stash-ios-challenge/achievements.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		1F19A34825795945008225F3 /* StashCoach */ = {
 			isa = PBXGroup;
 			children = (
+				1F19A3C12579958D008225F3 /* achievements.json */,
 				1F19A34925795945008225F3 /* AppDelegate.swift */,
 				1F19A34B25795945008225F3 /* SceneDelegate.swift */,
 				1F19A34D25795945008225F3 /* ViewController.swift */,
@@ -235,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F19A35925795948008225F3 /* LaunchScreen.storyboard in Resources */,
+				1F19A3C22579958D008225F3 /* achievements.json in Resources */,
 				1F19A35625795948008225F3 /* Assets.xcassets in Resources */,
 				1F19A35125795945008225F3 /* Main.storyboard in Resources */,
 			);
