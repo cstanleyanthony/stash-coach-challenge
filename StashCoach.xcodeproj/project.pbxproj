@@ -17,6 +17,14 @@
 		1F19A36425795948008225F3 /* StashCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36325795948008225F3 /* StashCoachTests.swift */; };
 		1F19A36F25795948008225F3 /* StashCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36E25795948008225F3 /* StashCoachUITests.swift */; };
 		1F19A3C22579958D008225F3 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A3C12579958D008225F3 /* achievements.json */; };
+		1F19A3C7257B37AB008225F3 /* CoachInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */; };
+		1F19A3CC257B3B02008225F3 /* CoachPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3CB257B3B02008225F3 /* CoachPresenterTests.swift */; };
+		1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3D0257B3BE4008225F3 /* CoachInteractor.swift */; };
+		1F19A3D6257B3CB9008225F3 /* CoachInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3D5257B3CB9008225F3 /* CoachInteractorProtocol.swift */; };
+		1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3E2257B4419008225F3 /* CoachPresenter.swift */; };
+		1F19A3EB257B4426008225F3 /* CoachPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3EA257B4426008225F3 /* CoachPresenterProtocol.swift */; };
+		1F19A3F4257B4450008225F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3F3257B4450008225F3 /* Router.swift */; };
+		1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3FC257B44D3008225F3 /* CoachViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,14 @@
 		1F19A36E25795948008225F3 /* StashCoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachUITests.swift; sourceTree = "<group>"; };
 		1F19A37025795948008225F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F19A3C12579958D008225F3 /* achievements.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = achievements.json; path = "../../../stash-ios-challenge/achievements.json"; sourceTree = "<group>"; };
+		1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInteractorTests.swift; sourceTree = "<group>"; };
+		1F19A3CB257B3B02008225F3 /* CoachPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterTests.swift; sourceTree = "<group>"; };
+		1F19A3D0257B3BE4008225F3 /* CoachInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInteractor.swift; sourceTree = "<group>"; };
+		1F19A3D5257B3CB9008225F3 /* CoachInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInteractorProtocol.swift; sourceTree = "<group>"; };
+		1F19A3E2257B4419008225F3 /* CoachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenter.swift; sourceTree = "<group>"; };
+		1F19A3EA257B4426008225F3 /* CoachPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterProtocol.swift; sourceTree = "<group>"; };
+		1F19A3F3257B4450008225F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		1F19A3FC257B44D3008225F3 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +119,12 @@
 		1F19A34825795945008225F3 /* StashCoach */ = {
 			isa = PBXGroup;
 			children = (
+				1F19A407257B45E7008225F3 /* Services */,
+				1F19A406257B45CE008225F3 /* Entities */,
+				1F19A401257B44D9008225F3 /* View */,
+				1F19A3F8257B4455008225F3 /* Router */,
+				1F19A3EF257B442D008225F3 /* Presenter */,
+				1F19A3E1257B42CE008225F3 /* Interactor */,
 				1F19A3C12579958D008225F3 /* achievements.json */,
 				1F19A34925795945008225F3 /* AppDelegate.swift */,
 				1F19A34B25795945008225F3 /* SceneDelegate.swift */,
@@ -120,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				1F19A36325795948008225F3 /* StashCoachTests.swift */,
+				1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */,
+				1F19A3CB257B3B02008225F3 /* CoachPresenterTests.swift */,
 				1F19A36525795948008225F3 /* Info.plist */,
 			);
 			path = StashCoachTests;
@@ -132,6 +156,54 @@
 				1F19A37025795948008225F3 /* Info.plist */,
 			);
 			path = StashCoachUITests;
+			sourceTree = "<group>";
+		};
+		1F19A3E1257B42CE008225F3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3D5257B3CB9008225F3 /* CoachInteractorProtocol.swift */,
+				1F19A3D0257B3BE4008225F3 /* CoachInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1F19A3EF257B442D008225F3 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3E2257B4419008225F3 /* CoachPresenter.swift */,
+				1F19A3EA257B4426008225F3 /* CoachPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1F19A3F8257B4455008225F3 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3F3257B4450008225F3 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		1F19A401257B44D9008225F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3FC257B44D3008225F3 /* CoachViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F19A406257B45CE008225F3 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1F19A407257B45E7008225F3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,10 +337,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */,
 				1F19A35425795945008225F3 /* StashCoach.xcdatamodeld in Sources */,
 				1F19A34E25795945008225F3 /* ViewController.swift in Sources */,
+				1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */,
 				1F19A34A25795945008225F3 /* AppDelegate.swift in Sources */,
+				1F19A3F4257B4450008225F3 /* Router.swift in Sources */,
+				1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */,
 				1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */,
+				1F19A3D6257B3CB9008225F3 /* CoachInteractorProtocol.swift in Sources */,
+				1F19A3EB257B4426008225F3 /* CoachPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +354,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19A3CC257B3B02008225F3 /* CoachPresenterTests.swift in Sources */,
 				1F19A36425795948008225F3 /* StashCoachTests.swift in Sources */,
+				1F19A3C7257B37AB008225F3 /* CoachInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
