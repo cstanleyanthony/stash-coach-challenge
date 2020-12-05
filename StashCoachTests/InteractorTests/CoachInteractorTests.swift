@@ -6,9 +6,11 @@ import XCTest
 @testable import StashCoach
 
 class CoachInteractorTests: XCTestCase {
+    
+    var interactor: CoachInteractorProtocol?
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        interactor = CoachInteractor()
     }
 
     override func tearDownWithError() throws {
@@ -16,8 +18,20 @@ class CoachInteractorTests: XCTestCase {
     }
 
     func testInteractorFetchesAchievements() throws {
-        let interactor: CoachInteractorProtocol = CoachInteractor()
         
+        let achievements = interactor?.fetchAchievements()
+        
+        XCTAssertEqual(achievements, [Achievement](), "Achievements should equal an array of achievements.")
+    }
+    
+    func testInteractorOrdersAchievementsByLevelsAscedning() throws {
+        
+        let achievements = interactor?.fetchAchievements()
+        
+        XCTAssertEqual(achievements, MockAchievements.achievementsOrdered, "Achievements should be ordered by level in ascending order.")
+    }
+    
+    func testAchievementHasId() throws {
         
     }
 
