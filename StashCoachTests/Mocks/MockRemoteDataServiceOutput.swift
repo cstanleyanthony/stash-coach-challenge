@@ -10,11 +10,11 @@ class MockRemoteDataServiceOutput: CoachRemoteDataServiceOutputProtocol {
     var remoteData: Data?
     var receivedFailure = false
     
-    func failureFetchingRemoteData() {
+    func failureFetchingData() {
         receivedFailure = true
     }
     
-    func fetchedRemoteData(data: Data) {
+    func fetchedData(data: Data) {
         self.remoteData = data
     }
     

@@ -6,5 +6,5 @@
 import Foundation
 
 protocol CoachInteractorInputProtocol {
-    func fetchAchievements() -> [Achievement]
+    func fetchAchievements()
 }

@@ -9,19 +9,31 @@ class CoachInteractor: CoachInteractorInputProtocol, CoachRemoteDataServiceOutpu
     
     let remoteDataService: CoachRemoteDataServiceInputProtocol
     
-    init(remoteDataService: CoachRemoteDataServiceInputProtocol) {
+    weak var interactorOutputManager: CoachInteractorOutputProtocol?
+    
+    init(remoteDataService: CoachRemoteDataServiceInputProtocol,
+         interactorOutputManager: CoachInteractorOutputProtocol? = nil) {
+        
         self.remoteDataService = remoteDataService
+        self.interactorOutputManager = interactorOutputManager
     }
     
-    func fetchAchievements() -> [Achievement] {
-        return []
+    func fetchAchievements() {
+        remoteDataService.fetchAchievements()
     }
     
     func failureFetchingData() {
-        
+        interactorOutputManager?.failedFetchingAchievements()
     }
     
     func fetchedData(data: Data) {
-        
+        do {
+            let achievements = try JSONDecoder().decode(Achievements.self, from: data)
+            interactorOutputManager?.achievements(achievements: achievements.achievements)
+        }
+        catch let err {
+            LoggerService.log(category: "Interactor fetched data decode", message: "Failed to decode data:", value: err.localizedDescription)
+            interactorOutputManager?.failedFetchingAchievements()
+        }
     }
 }

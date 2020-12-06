@@ -10,13 +10,19 @@ class MockRemoteDataServiceInput: CoachRemoteDataServiceInputProtocol {
     
     weak var remoteDataServiceOutput: CoachRemoteDataServiceOutputProtocol?
     
+    var testFailure = false
+    var testDecodeFailure = false
+    
     func fetchAchievements() {
 
-        guard let jsonData = MockAchievements.jsonAchievements
-        else {
+        if testFailure {
             remoteDataServiceOutput?.failureFetchingData()
-            return
         }
-        remoteDataServiceOutput?.fetchedData(data: jsonData)
+        else if testDecodeFailure {
+            remoteDataServiceOutput?.fetchedData(data: Data())
+        }
+        else {
+            remoteDataServiceOutput?.fetchedData(data: MockAchievements.jsonAchievements)
+        }
     }
 }

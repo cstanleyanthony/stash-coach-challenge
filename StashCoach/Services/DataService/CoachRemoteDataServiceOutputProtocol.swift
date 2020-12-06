@@ -6,6 +6,6 @@
 import Foundation
 
 /// A protocol to be used for sending data back from the remote data service.
-protocol CoachRemoteDataServiceOutputProtocol: class, CoachDataServiceOutputProtocol {
+protocol CoachRemoteDataServiceOutputProtocol: CoachDataServiceOutputProtocol {
     
 }

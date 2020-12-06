@@ -8,14 +8,14 @@ import Foundation
 
 struct MockAchievements {
     
-    static let achievement1 = Achievement(level: 1)
-    static let achievement2 = Achievement(level: 2)
-    static let achievement3 = Achievement(level: 3)
+    static let achievement1 = Achievement(level: "1")
+    static let achievement2 = Achievement(level: "2")
+    static let achievement3 = Achievement(level: "3")
     
     static let achievementsUnordered: [Achievement] = [
-        achievement2,
+        achievement1,
         achievement3,
-        achievement1
+        achievement2
     ]
     
     static let achievementsOrdered: [Achievement] = [
@@ -24,6 +24,7 @@ struct MockAchievements {
         achievement3
     ]
     
+    /// Should be equavalent to the 'achievementsUnordered' property to test against parsing.
     static let jsonAchievements = """
 {
     "achievements": [
@@ -38,7 +39,7 @@ struct MockAchievements {
         }
     ]
 }
-""".data(using: .utf8)
+""".data(using: .utf8)!
     
     static let jsonAcievementsFile = """
 {
@@ -75,6 +76,6 @@ struct MockAchievements {
     ]
 }
 
-""".data(using: .utf8)
+""".data(using: .utf8)!
     
 }

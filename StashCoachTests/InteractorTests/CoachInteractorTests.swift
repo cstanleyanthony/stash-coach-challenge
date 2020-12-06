@@ -7,32 +7,40 @@ import XCTest
 
 class CoachInteractorTests: XCTestCase {
     
-    var interactor: CoachInteractorInputProtocol?
+    var interactor: (CoachInteractorInputProtocol & CoachRemoteDataServiceOutputProtocol)?
+    let mockRemoteDataServiceInput = MockRemoteDataServiceInput()
+    let mockInteractorOutputManager = MockInteractorOutputManager()
 
     override func setUpWithError() throws {
-        interactor = CoachInteractor(remoteDataService: MockRemoteDataServiceInput())
+        interactor = CoachInteractor(remoteDataService: mockRemoteDataServiceInput,
+                                     interactorOutputManager: mockInteractorOutputManager)
+        mockRemoteDataServiceInput.remoteDataServiceOutput = interactor
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
     }
 
     func testInteractorFetchesAchievements() throws {
         
-        let achievements = interactor?.fetchAchievements()
+        interactor?.fetchAchievements()
         
-        XCTAssertEqual(achievements, [Achievement](), "Achievements should equal an array of achievements.")
+        XCTAssertNotNil(mockInteractorOutputManager.achievements, "Achievements should not be nil.")
+        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsUnordered, "Achievements should equal an array of unordered achievements.")
     }
     
-    func testInteractorOrdersAchievementsByLevelsAscedning() throws {
+    func testFailedFetchingAcievements() throws {
+        mockRemoteDataServiceInput.testFailure = true
+        interactor?.fetchAchievements()
         
-        let achievements = interactor?.fetchAchievements()
-        
-        XCTAssertEqual(achievements, MockAchievements.achievementsOrdered, "Achievements should be ordered by level in ascending order.")
+        XCTAssertTrue(mockInteractorOutputManager.failureTrigggerd, "When receiving a failure from the data service the interactor should send a failure back to the output.")
     }
     
-    func testAchievementHasId() throws {
+    func testFailedDecodingFetchedAchievements() throws {
+        mockRemoteDataServiceInput.testDecodeFailure = true
+        interactor?.fetchAchievements()
         
+        XCTAssertTrue(mockInteractorOutputManager.failureTrigggerd, "When failing to decode received data a failure should be passed back to the output.")
     }
 
     func testPerformanceExample() throws {
