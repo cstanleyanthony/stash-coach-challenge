@@ -6,6 +6,7 @@
 import Foundation
 
 /// A protocol to be used by either remote or local data services.
-protocol CoachDataServiceProtocol {
+/// Allows the interactor to request data from the data service.
+protocol CoachDataServiceInputProtocol {
     func fetchAchievements()
 }
