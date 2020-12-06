@@ -5,7 +5,7 @@
 
 import Foundation
 
-class CoachInteractor: CoachInteractorProtocol {
+class CoachInteractor: CoachInteractorInputProtocol, CoachRemoteDataServiceOutputProtocol {
     
     let remoteDataService: CoachRemoteDataServiceInputProtocol
     
@@ -15,5 +15,13 @@ class CoachInteractor: CoachInteractorProtocol {
     
     func fetchAchievements() -> [Achievement] {
         return []
+    }
+    
+    func failureFetchingData() {
+        
+    }
+    
+    func fetchedData(data: Data) {
+        
     }
 }

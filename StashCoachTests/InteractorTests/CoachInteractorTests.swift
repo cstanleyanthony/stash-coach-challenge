@@ -7,10 +7,10 @@ import XCTest
 
 class CoachInteractorTests: XCTestCase {
     
-    var interactor: CoachInteractorProtocol?
+    var interactor: CoachInteractorInputProtocol?
 
     override func setUpWithError() throws {
-        interactor = CoachInteractor()
+        interactor = CoachInteractor(remoteDataService: MockRemoteDataServiceInput())
     }
 
     override func tearDownWithError() throws {

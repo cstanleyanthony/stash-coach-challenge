@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F01DAC6257C237400E1F219 /* CoachRemoteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */; };
+		1F01DACE257C240700E1F219 /* CoachRemoteDataServiceInputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputProtocol.swift */; };
+		1F01DAD3257C248B00E1F219 /* CoachDataServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAD2257C248B00E1F219 /* CoachDataServiceProtocol.swift */; };
+		1F01DADD257C285700E1F219 /* CoachRemoteDataServiceOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DADC257C285700E1F219 /* CoachRemoteDataServiceOutputProtocol.swift */; };
+		1F01DAE5257C2F6F00E1F219 /* LoggerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAE4257C2F6E00E1F219 /* LoggerService.swift */; };
+		1F01DAF5257C34CA00E1F219 /* URLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAF4257C34CA00E1F219 /* URLService.swift */; };
+		1F01DAFE257C34F000E1F219 /* URLServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAFD257C34F000E1F219 /* URLServiceProtocol.swift */; };
+		1F01DB0B257C3D5000E1F219 /* RemoteDataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB0A257C3D5000E1F219 /* RemoteDataServiceTests.swift */; };
+		1F01DB21257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB20257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift */; };
+		1F01DB29257C611C00E1F219 /* MockRemoteServiceInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB28257C611C00E1F219 /* MockRemoteServiceInput.swift */; };
+		1F01DB44257C870400E1F219 /* CoachDataServiceOutputProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB43257C870400E1F219 /* CoachDataServiceOutputProtocol.swift */; };
 		1F19A34A25795945008225F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34925795945008225F3 /* AppDelegate.swift */; };
 		1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34B25795945008225F3 /* SceneDelegate.swift */; };
 		1F19A34E25795945008225F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34D25795945008225F3 /* ViewController.swift */; };
@@ -14,7 +25,6 @@
 		1F19A35425795945008225F3 /* StashCoach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A35225795945008225F3 /* StashCoach.xcdatamodeld */; };
 		1F19A35625795948008225F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A35525795948008225F3 /* Assets.xcassets */; };
 		1F19A35925795948008225F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A35725795948008225F3 /* LaunchScreen.storyboard */; };
-		1F19A36425795948008225F3 /* StashCoachTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36325795948008225F3 /* StashCoachTests.swift */; };
 		1F19A36F25795948008225F3 /* StashCoachUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A36E25795948008225F3 /* StashCoachUITests.swift */; };
 		1F19A3C22579958D008225F3 /* achievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A3C12579958D008225F3 /* achievements.json */; };
 		1F19A3C7257B37AB008225F3 /* CoachInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */; };
@@ -25,6 +35,9 @@
 		1F19A3EB257B4426008225F3 /* CoachPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3EA257B4426008225F3 /* CoachPresenterProtocol.swift */; };
 		1F19A3F4257B4450008225F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3F3257B4450008225F3 /* Router.swift */; };
 		1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3FC257B44D3008225F3 /* CoachViewController.swift */; };
+		1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A40B257C0FB8008225F3 /* MockAchievements.json */; };
+		1F19A422257C12C9008225F3 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A421257C12C9008225F3 /* Achievement.swift */; };
+		1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A426257C1A34008225F3 /* MockAchievements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +58,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRemoteDataService.swift; sourceTree = "<group>"; };
+		1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRemoteDataServiceInputProtocol.swift; sourceTree = "<group>"; };
+		1F01DAD2257C248B00E1F219 /* CoachDataServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachDataServiceProtocol.swift; sourceTree = "<group>"; };
+		1F01DADC257C285700E1F219 /* CoachRemoteDataServiceOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRemoteDataServiceOutputProtocol.swift; sourceTree = "<group>"; };
+		1F01DAE4257C2F6E00E1F219 /* LoggerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerService.swift; sourceTree = "<group>"; };
+		1F01DAF4257C34CA00E1F219 /* URLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLService.swift; sourceTree = "<group>"; };
+		1F01DAFD257C34F000E1F219 /* URLServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLServiceProtocol.swift; sourceTree = "<group>"; };
+		1F01DB0A257C3D5000E1F219 /* RemoteDataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataServiceTests.swift; sourceTree = "<group>"; };
+		1F01DB20257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteDataServiceOutput.swift; sourceTree = "<group>"; };
+		1F01DB28257C611C00E1F219 /* MockRemoteServiceInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockRemoteServiceInput.swift; sourceTree = "<group>"; };
+		1F01DB43257C870400E1F219 /* CoachDataServiceOutputProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachDataServiceOutputProtocol.swift; sourceTree = "<group>"; };
 		1F19A34625795945008225F3 /* StashCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F19A34925795945008225F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F19A34B25795945008225F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,7 +79,6 @@
 		1F19A35825795948008225F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F19A35A25795948008225F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F19A35F25795948008225F3 /* StashCoachTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F19A36325795948008225F3 /* StashCoachTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachTests.swift; sourceTree = "<group>"; };
 		1F19A36525795948008225F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F19A36A25795948008225F3 /* StashCoachUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StashCoachUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F19A36E25795948008225F3 /* StashCoachUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StashCoachUITests.swift; sourceTree = "<group>"; };
@@ -69,6 +92,9 @@
 		1F19A3EA257B4426008225F3 /* CoachPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterProtocol.swift; sourceTree = "<group>"; };
 		1F19A3F3257B4450008225F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		1F19A3FC257B44D3008225F3 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
+		1F19A40B257C0FB8008225F3 /* MockAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAchievements.json; sourceTree = "<group>"; };
+		1F19A421257C12C9008225F3 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
+		1F19A426257C1A34008225F3 /* MockAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockAchievements.swift; path = StashCoachTests/Mocks/MockAchievements.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +122,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F01DAE9257C2F7400E1F219 /* LoggerService */ = {
+			isa = PBXGroup;
+			children = (
+				1F01DAE4257C2F6E00E1F219 /* LoggerService.swift */,
+			);
+			path = LoggerService;
+			sourceTree = "<group>";
+		};
+		1F01DAF0257C2F8200E1F219 /* DataService */ = {
+			isa = PBXGroup;
+			children = (
+				1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */,
+				1F01DADC257C285700E1F219 /* CoachRemoteDataServiceOutputProtocol.swift */,
+				1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputProtocol.swift */,
+				1F01DAD2257C248B00E1F219 /* CoachDataServiceProtocol.swift */,
+				1F01DB43257C870400E1F219 /* CoachDataServiceOutputProtocol.swift */,
+			);
+			path = DataService;
+			sourceTree = "<group>";
+		};
+		1F01DAF9257C34CE00E1F219 /* URLService */ = {
+			isa = PBXGroup;
+			children = (
+				1F01DAF4257C34CA00E1F219 /* URLService.swift */,
+				1F01DAFD257C34F000E1F219 /* URLServiceProtocol.swift */,
+			);
+			path = URLService;
+			sourceTree = "<group>";
+		};
+		1F01DB0F257C3D5500E1F219 /* ServiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F01DB0A257C3D5000E1F219 /* RemoteDataServiceTests.swift */,
+			);
+			path = ServiceTests;
+			sourceTree = "<group>";
+		};
 		1F19A33D25795945008225F3 = {
 			isa = PBXGroup;
 			children = (
@@ -141,9 +204,10 @@
 		1F19A36225795948008225F3 /* StashCoachTests */ = {
 			isa = PBXGroup;
 			children = (
-				1F19A36325795948008225F3 /* StashCoachTests.swift */,
-				1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */,
-				1F19A3CB257B3B02008225F3 /* CoachPresenterTests.swift */,
+				1F01DB0F257C3D5500E1F219 /* ServiceTests */,
+				1F19A42B257C1A3F008225F3 /* Mocks */,
+				1F19A410257C0FC4008225F3 /* InteractorTests */,
+				1F19A417257C0FD0008225F3 /* PresenterTests */,
 				1F19A36525795948008225F3 /* Info.plist */,
 			);
 			path = StashCoachTests;
@@ -195,6 +259,7 @@
 		1F19A406257B45CE008225F3 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				1F19A421257C12C9008225F3 /* Achievement.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -202,8 +267,38 @@
 		1F19A407257B45E7008225F3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				1F01DAF9257C34CE00E1F219 /* URLService */,
+				1F01DAE9257C2F7400E1F219 /* LoggerService */,
+				1F01DAF0257C2F8200E1F219 /* DataService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		1F19A410257C0FC4008225F3 /* InteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3C6257B37AB008225F3 /* CoachInteractorTests.swift */,
+			);
+			path = InteractorTests;
+			sourceTree = "<group>";
+		};
+		1F19A417257C0FD0008225F3 /* PresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A3CB257B3B02008225F3 /* CoachPresenterTests.swift */,
+			);
+			path = PresenterTests;
+			sourceTree = "<group>";
+		};
+		1F19A42B257C1A3F008225F3 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				1F01DB28257C611C00E1F219 /* MockRemoteServiceInput.swift */,
+				1F01DB20257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift */,
+				1F19A426257C1A34008225F3 /* MockAchievements.swift */,
+				1F19A40B257C0FB8008225F3 /* MockAchievements.json */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +415,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,16 +433,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F01DAD3257C248B00E1F219 /* CoachDataServiceProtocol.swift in Sources */,
 				1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */,
+				1F01DAF5257C34CA00E1F219 /* URLService.swift in Sources */,
 				1F19A35425795945008225F3 /* StashCoach.xcdatamodeld in Sources */,
 				1F19A34E25795945008225F3 /* ViewController.swift in Sources */,
 				1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */,
 				1F19A34A25795945008225F3 /* AppDelegate.swift in Sources */,
+				1F01DAFE257C34F000E1F219 /* URLServiceProtocol.swift in Sources */,
+				1F01DADD257C285700E1F219 /* CoachRemoteDataServiceOutputProtocol.swift in Sources */,
+				1F01DACE257C240700E1F219 /* CoachRemoteDataServiceInputProtocol.swift in Sources */,
+				1F19A422257C12C9008225F3 /* Achievement.swift in Sources */,
+				1F01DB44257C870400E1F219 /* CoachDataServiceOutputProtocol.swift in Sources */,
 				1F19A3F4257B4450008225F3 /* Router.swift in Sources */,
+				1F01DAC6257C237400E1F219 /* CoachRemoteDataService.swift in Sources */,
 				1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */,
 				1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */,
 				1F19A3D6257B3CB9008225F3 /* CoachInteractorProtocol.swift in Sources */,
 				1F19A3EB257B4426008225F3 /* CoachPresenterProtocol.swift in Sources */,
+				1F01DAE5257C2F6F00E1F219 /* LoggerService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,9 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F01DB21257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift in Sources */,
+				1F01DB29257C611C00E1F219 /* MockRemoteServiceInput.swift in Sources */,
 				1F19A3CC257B3B02008225F3 /* CoachPresenterTests.swift in Sources */,
-				1F19A36425795948008225F3 /* StashCoachTests.swift in Sources */,
 				1F19A3C7257B37AB008225F3 /* CoachInteractorTests.swift in Sources */,
+				1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */,
+				1F01DB0B257C3D5000E1F219 /* RemoteDataServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +511,123 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1F01DB39257C679600E1F219 /* Release Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Test";
+		};
+		1F01DB3A257C679600E1F219 /* Release Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6R6LG45Z4;
+				INFOPLIST_FILE = StashCoach/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stashCoach.www.StashCoach;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Release Test";
+		};
+		1F01DB3B257C679600E1F219 /* Release Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6R6LG45Z4;
+				INFOPLIST_FILE = StashCoachTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stashCoach.www.StashCoachTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StashCoach.app/StashCoach";
+			};
+			name = "Release Test";
+		};
+		1F01DB3C257C679600E1F219 /* Release Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A6R6LG45Z4;
+				INFOPLIST_FILE = StashCoachUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.stashCoach.www.StashCoachUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StashCoach;
+			};
+			name = "Release Test";
+		};
 		1F19A37125795948008225F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -501,6 +726,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -649,36 +875,40 @@
 			buildConfigurations = (
 				1F19A37125795948008225F3 /* Debug */,
 				1F19A37225795948008225F3 /* Release */,
+				1F01DB39257C679600E1F219 /* Release Test */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F19A37325795948008225F3 /* Build configuration list for PBXNativeTarget "StashCoach" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F19A37425795948008225F3 /* Debug */,
 				1F19A37525795948008225F3 /* Release */,
+				1F01DB3A257C679600E1F219 /* Release Test */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F19A37625795948008225F3 /* Build configuration list for PBXNativeTarget "StashCoachTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F19A37725795948008225F3 /* Debug */,
 				1F19A37825795948008225F3 /* Release */,
+				1F01DB3B257C679600E1F219 /* Release Test */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		1F19A37925795948008225F3 /* Build configuration list for PBXNativeTarget "StashCoachUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1F19A37A25795948008225F3 /* Debug */,
 				1F19A37B25795948008225F3 /* Release */,
+				1F01DB3C257C679600E1F219 /* Release Test */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 
