@@ -21,9 +21,10 @@
 		1F01DB44257C870400E1F219 /* CoachDataServiceOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB43257C870400E1F219 /* CoachDataServiceOutputable.swift */; };
 		1F01DB4C257C973D00E1F219 /* CoachInteractorOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB4B257C973D00E1F219 /* CoachInteractorOutputable.swift */; };
 		1F01DB51257C9A9A00E1F219 /* MockInteractorOutputManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DB50257C9A9A00E1F219 /* MockInteractorOutputManager.swift */; };
+		1F181F36257E0B7D00694E64 /* CoachPresenterOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F181F35257E0B7D00694E64 /* CoachPresenterOutputable.swift */; };
 		1F19A34A25795945008225F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34925795945008225F3 /* AppDelegate.swift */; };
 		1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34B25795945008225F3 /* SceneDelegate.swift */; };
-		1F19A34E25795945008225F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34D25795945008225F3 /* ViewController.swift */; };
+		1F19A34E25795945008225F3 /* StarterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A34D25795945008225F3 /* StarterViewController.swift */; };
 		1F19A35125795945008225F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A34F25795945008225F3 /* Main.storyboard */; };
 		1F19A35425795945008225F3 /* StashCoach.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A35225795945008225F3 /* StashCoach.xcdatamodeld */; };
 		1F19A35625795948008225F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A35525795948008225F3 /* Assets.xcassets */; };
@@ -36,13 +37,22 @@
 		1F19A3D6257B3CB9008225F3 /* CoachInteractorInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3D5257B3CB9008225F3 /* CoachInteractorInputable.swift */; };
 		1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3E2257B4419008225F3 /* CoachPresenter.swift */; };
 		1F19A3EB257B4426008225F3 /* CoachPresenterInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3EA257B4426008225F3 /* CoachPresenterInputable.swift */; };
-		1F19A3F4257B4450008225F3 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3F3257B4450008225F3 /* Router.swift */; };
-		1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3FC257B44D3008225F3 /* CoachViewController.swift */; };
+		1F19A3F4257B4450008225F3 /* CoachRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3F3257B4450008225F3 /* CoachRouter.swift */; };
 		1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A40B257C0FB8008225F3 /* MockAchievements.json */; };
 		1F19A422257C12C9008225F3 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A421257C12C9008225F3 /* Achievement.swift */; };
 		1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A426257C1A34008225F3 /* MockAchievements.swift */; };
-		1F19C31D257DD12300001FBB /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C31C257DD12300001FBB /* AchievementsViewController.swift */; };
+		1F19C31D257DD12300001FBB /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C31C257DD12300001FBB /* CoachViewController.swift */; };
 		1F19C322257DDFEF00001FBB /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */; };
+		1F19C338257DF01200001FBB /* CoachRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C337257DF01200001FBB /* CoachRoutable.swift */; };
+		1F19C33D257DF0F100001FBB /* CoachStarterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C33C257DF0F100001FBB /* CoachStarterPresenter.swift */; };
+		1F19C342257DF39C00001FBB /* CoachStarterPresenterInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C341257DF39C00001FBB /* CoachStarterPresenterInputable.swift */; };
+		1F19C347257DF5E000001FBB /* CoachStarterPresenterOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C346257DF5E000001FBB /* CoachStarterPresenterOutputable.swift */; };
+		1F19C34C257DF6D000001FBB /* CoachStarterInteractorInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C34B257DF6D000001FBB /* CoachStarterInteractorInputable.swift */; };
+		1F19C351257DF86600001FBB /* DisplayText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C350257DF86600001FBB /* DisplayText.swift */; };
+		1F19C356257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C355257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift */; };
+		1F19C376257DF9E500001FBB /* CoachStarterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C375257DF9E500001FBB /* CoachStarterRouter.swift */; };
+		1F19C391257DFAE300001FBB /* CoachStarterRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */; };
+		1F19C399257DFC9200001FBB /* CoachStarterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C398257DFC9200001FBB /* CoachStarterInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +87,11 @@
 		1F01DB43257C870400E1F219 /* CoachDataServiceOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachDataServiceOutputable.swift; sourceTree = "<group>"; };
 		1F01DB4B257C973D00E1F219 /* CoachInteractorOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInteractorOutputable.swift; sourceTree = "<group>"; };
 		1F01DB50257C9A9A00E1F219 /* MockInteractorOutputManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorOutputManager.swift; sourceTree = "<group>"; };
+		1F181F35257E0B7D00694E64 /* CoachPresenterOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterOutputable.swift; sourceTree = "<group>"; };
 		1F19A34625795945008225F3 /* StashCoach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StashCoach.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F19A34925795945008225F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F19A34B25795945008225F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1F19A34D25795945008225F3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F19A34D25795945008225F3 /* StarterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarterViewController.swift; sourceTree = "<group>"; };
 		1F19A35025795945008225F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F19A35325795945008225F3 /* StashCoach.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StashCoach.xcdatamodel; sourceTree = "<group>"; };
 		1F19A35525795948008225F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -98,13 +109,22 @@
 		1F19A3D5257B3CB9008225F3 /* CoachInteractorInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachInteractorInputable.swift; sourceTree = "<group>"; };
 		1F19A3E2257B4419008225F3 /* CoachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenter.swift; sourceTree = "<group>"; };
 		1F19A3EA257B4426008225F3 /* CoachPresenterInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterInputable.swift; sourceTree = "<group>"; };
-		1F19A3F3257B4450008225F3 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		1F19A3FC257B44D3008225F3 /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
+		1F19A3F3257B4450008225F3 /* CoachRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRouter.swift; sourceTree = "<group>"; };
 		1F19A40B257C0FB8008225F3 /* MockAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAchievements.json; sourceTree = "<group>"; };
 		1F19A421257C12C9008225F3 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		1F19A426257C1A34008225F3 /* MockAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockAchievements.swift; path = StashCoachTests/Mocks/MockAchievements.swift; sourceTree = SOURCE_ROOT; };
-		1F19C31C257DD12300001FBB /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		1F19C31C257DD12300001FBB /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
 		1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F19C337257DF01200001FBB /* CoachRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRoutable.swift; sourceTree = "<group>"; };
+		1F19C33C257DF0F100001FBB /* CoachStarterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterPresenter.swift; sourceTree = "<group>"; };
+		1F19C341257DF39C00001FBB /* CoachStarterPresenterInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterPresenterInputable.swift; sourceTree = "<group>"; };
+		1F19C346257DF5E000001FBB /* CoachStarterPresenterOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterPresenterOutputable.swift; sourceTree = "<group>"; };
+		1F19C34B257DF6D000001FBB /* CoachStarterInteractorInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterInteractorInputable.swift; sourceTree = "<group>"; };
+		1F19C350257DF86600001FBB /* DisplayText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayText.swift; sourceTree = "<group>"; };
+		1F19C355257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterInteractorOutputable.swift; sourceTree = "<group>"; };
+		1F19C375257DF9E500001FBB /* CoachStarterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterRouter.swift; sourceTree = "<group>"; };
+		1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterRoutable.swift; sourceTree = "<group>"; };
+		1F19C398257DFC9200001FBB /* CoachStarterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,15 +214,11 @@
 			isa = PBXGroup;
 			children = (
 				1F19A407257B45E7008225F3 /* Services */,
-				1F19A406257B45CE008225F3 /* Entities */,
-				1F19A401257B44D9008225F3 /* View */,
-				1F19A3F8257B4455008225F3 /* Router */,
-				1F19A3EF257B442D008225F3 /* Presenter */,
-				1F19A3E1257B42CE008225F3 /* Interactor */,
+				1F19C369257DF98D00001FBB /* Coach */,
+				1F19C35E257DF92900001FBB /* Starter */,
 				1F19A3C12579958D008225F3 /* achievements.json */,
 				1F19A34925795945008225F3 /* AppDelegate.swift */,
 				1F19A34B25795945008225F3 /* SceneDelegate.swift */,
-				1F19A34D25795945008225F3 /* ViewController.swift */,
 				1F19A34F25795945008225F3 /* Main.storyboard */,
 				1F19A35525795948008225F3 /* Assets.xcassets */,
 				1F19A35725795948008225F3 /* LaunchScreen.storyboard */,
@@ -247,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				1F19A3E2257B4419008225F3 /* CoachPresenter.swift */,
+				1F181F35257E0B7D00694E64 /* CoachPresenterOutputable.swift */,
 				1F19A3EA257B4426008225F3 /* CoachPresenterInputable.swift */,
 			);
 			path = Presenter;
@@ -255,7 +272,8 @@
 		1F19A3F8257B4455008225F3 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				1F19A3F3257B4450008225F3 /* Router.swift */,
+				1F19A3F3257B4450008225F3 /* CoachRouter.swift */,
+				1F19C337257DF01200001FBB /* CoachRoutable.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -263,9 +281,8 @@
 		1F19A401257B44D9008225F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1F19C31C257DD12300001FBB /* AchievementsViewController.swift */,
+				1F19C31C257DD12300001FBB /* CoachViewController.swift */,
 				1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */,
-				1F19A3FC257B44D3008225F3 /* CoachViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -314,6 +331,75 @@
 				1F19A40B257C0FB8008225F3 /* MockAchievements.json */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		1F19C35A257DF90400001FBB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1F19C398257DFC9200001FBB /* CoachStarterInteractor.swift */,
+				1F19C34B257DF6D000001FBB /* CoachStarterInteractorInputable.swift */,
+				1F19C355257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1F19C35E257DF92900001FBB /* Starter */ = {
+			isa = PBXGroup;
+			children = (
+				1F19C371257DF9B200001FBB /* View */,
+				1F19C35A257DF90400001FBB /* Interactor */,
+				1F19C362257DF95400001FBB /* Presenter */,
+				1F19C36D257DF9A600001FBB /* Entities */,
+				1F19C37A257DF9E800001FBB /* Router */,
+			);
+			path = Starter;
+			sourceTree = "<group>";
+		};
+		1F19C362257DF95400001FBB /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1F19C341257DF39C00001FBB /* CoachStarterPresenterInputable.swift */,
+				1F19C33C257DF0F100001FBB /* CoachStarterPresenter.swift */,
+				1F19C346257DF5E000001FBB /* CoachStarterPresenterOutputable.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1F19C369257DF98D00001FBB /* Coach */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A406257B45CE008225F3 /* Entities */,
+				1F19A401257B44D9008225F3 /* View */,
+				1F19A3F8257B4455008225F3 /* Router */,
+				1F19A3EF257B442D008225F3 /* Presenter */,
+				1F19A3E1257B42CE008225F3 /* Interactor */,
+			);
+			path = Coach;
+			sourceTree = "<group>";
+		};
+		1F19C36D257DF9A600001FBB /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1F19C350257DF86600001FBB /* DisplayText.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		1F19C371257DF9B200001FBB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F19A34D25795945008225F3 /* StarterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F19C37A257DF9E800001FBB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				1F19C375257DF9E500001FBB /* CoachStarterRouter.swift */,
+				1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,11 +535,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F01DAD3257C248B00E1F219 /* CoachDataServiceInputable.swift in Sources */,
+				1F19C34C257DF6D000001FBB /* CoachStarterInteractorInputable.swift in Sources */,
 				1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */,
 				1F01DAF5257C34CA00E1F219 /* URLService.swift in Sources */,
 				1F19A35425795945008225F3 /* StashCoach.xcdatamodeld in Sources */,
-				1F19A34E25795945008225F3 /* ViewController.swift in Sources */,
-				1F19A3FD257B44D3008225F3 /* CoachViewController.swift in Sources */,
+				1F19A34E25795945008225F3 /* StarterViewController.swift in Sources */,
 				1F19A34A25795945008225F3 /* AppDelegate.swift in Sources */,
 				1F01DAFE257C34F000E1F219 /* URLServiceable.swift in Sources */,
 				1F01DADD257C285700E1F219 /* CoachRemoteDataServiceOutputable.swift in Sources */,
@@ -461,11 +547,21 @@
 				1F19A422257C12C9008225F3 /* Achievement.swift in Sources */,
 				1F01DB44257C870400E1F219 /* CoachDataServiceOutputable.swift in Sources */,
 				1F19C322257DDFEF00001FBB /* AchievementCollectionViewCell.swift in Sources */,
-				1F19C31D257DD12300001FBB /* AchievementsViewController.swift in Sources */,
-				1F19A3F4257B4450008225F3 /* Router.swift in Sources */,
+				1F19C347257DF5E000001FBB /* CoachStarterPresenterOutputable.swift in Sources */,
+				1F19C31D257DD12300001FBB /* CoachViewController.swift in Sources */,
+				1F19A3F4257B4450008225F3 /* CoachRouter.swift in Sources */,
 				1F01DAC6257C237400E1F219 /* CoachRemoteDataService.swift in Sources */,
+				1F19C376257DF9E500001FBB /* CoachStarterRouter.swift in Sources */,
+				1F19C33D257DF0F100001FBB /* CoachStarterPresenter.swift in Sources */,
 				1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */,
+				1F181F36257E0B7D00694E64 /* CoachPresenterOutputable.swift in Sources */,
+				1F19C399257DFC9200001FBB /* CoachStarterInteractor.swift in Sources */,
+				1F19C391257DFAE300001FBB /* CoachStarterRoutable.swift in Sources */,
+				1F19C342257DF39C00001FBB /* CoachStarterPresenterInputable.swift in Sources */,
 				1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */,
+				1F19C338257DF01200001FBB /* CoachRoutable.swift in Sources */,
+				1F19C351257DF86600001FBB /* DisplayText.swift in Sources */,
+				1F19C356257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift in Sources */,
 				1F19A3D6257B3CB9008225F3 /* CoachInteractorInputable.swift in Sources */,
 				1F19A3EB257B4426008225F3 /* CoachPresenterInputable.swift in Sources */,
 				1F01DB4C257C973D00E1F219 /* CoachInteractorOutputable.swift in Sources */,

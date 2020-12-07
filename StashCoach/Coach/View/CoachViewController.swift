@@ -5,7 +5,7 @@
 
 import UIKit
 
-class AchievementsViewController: UIViewController {
+class CoachViewController: UIViewController, CoachPresenterOutputable {
     
     var collectionView: UICollectionView?
     var presenter: CoachPresenterInputable?
@@ -21,8 +21,13 @@ class AchievementsViewController: UIViewController {
     private func createLayout() -> UICollectionViewFlowLayout {
         
         let layout = UICollectionViewFlowLayout()
-        let itemWidth: CGFloat = view.bounds.width * 0.8
-        let itemHeight: CGFloat = (view.bounds.height / 3) * 0.8
+        let widthMultiple: CGFloat = 0.85
+        let heightMultiple: CGFloat = 0.9
+        let itemWidth: CGFloat = view.bounds.width * widthMultiple
+        let itemHeight: CGFloat = (view.bounds.height / 3) * heightMultiple
+        let topInset: CGFloat = (view.bounds.width - (view.bounds.width * widthMultiple)) / 2
+        let insets = UIEdgeInsets(top: topInset, left: 0, bottom: 50, right: 0)
+        layout.sectionInset = insets
         layout.itemSize = CGSize(width: itemWidth, height: itemHeight)
         
         layout.scrollDirection = .vertical
@@ -55,7 +60,7 @@ class AchievementsViewController: UIViewController {
 
 }
 
-extension AchievementsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension CoachViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 3
     }
