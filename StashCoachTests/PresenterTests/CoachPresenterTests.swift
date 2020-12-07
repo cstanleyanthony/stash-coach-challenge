@@ -1,14 +1,11 @@
-//
-//  StashCoachTests.swift
-//  StashCoachTests
-//
-//  Created by Christian Sarcona on 12/3/20.
-//
-
+// Created by Christian Sarcona on 12/4/20 for Stash
+// Stash Coach challenge
+// 
+	
 import XCTest
 @testable import StashCoach
 
-class StashCoachTests: XCTestCase {
+class CoachPresenterTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,9 +15,11 @@ class StashCoachTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPresenterOrdersAchievementsByLevelsAscedning() throws {
+        
+//        interactor?.fetchAchievements()
+//        
+//        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsOrdered, "Achievements should be ordered by level in ascending order.")
     }
 
     func testPerformanceExample() throws {
