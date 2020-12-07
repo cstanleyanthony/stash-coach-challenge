@@ -9,4 +9,5 @@ import Foundation
 /// Allows the interactor to request data from the data service.
 protocol CoachDataServiceInputable {
     func fetchAchievements()
+    func fetchResource(fromUrlString url: String, completion: (()->Void)?)
 }

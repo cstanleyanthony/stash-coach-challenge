@@ -25,4 +25,8 @@ class MockRemoteDataServiceInput: CoachRemoteDataServiceInputable {
             remoteDataServiceOutput?.fetchedData(data: MockAchievements.jsonAchievements)
         }
     }
+    
+    func fetchResource(fromUrlString url: String, completion: (()->Void)? = nil) {
+        
+    }
 }

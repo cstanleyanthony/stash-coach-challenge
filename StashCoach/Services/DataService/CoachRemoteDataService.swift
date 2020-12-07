@@ -26,6 +26,11 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
         #endif
     }
     
+    func fetchResource(fromUrlString url: String, completion: (()->Void)? = nil) {
+        
+        fetchData(fromUrl: URL(string: url), completion: completion)
+    }
+    
     private func fetchLocalJSON() {
         
         let loggerCategory = "Remote data service local fetch"
@@ -49,12 +54,17 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
     }
     
     private func fetchRemoteJSON() {
+        fetchData(fromUrl: URLService.achievements.url)
+    }
+    
+    private func fetchData(fromUrl url: URL?, completion: (()->Void)? = nil) {
         
-        let loggerCategory = "Remote data service remote fetch"
+        let loggerCategory = "Remote data service fetch data"
         LoggerService.log(category: loggerCategory,
-                          message: "Fetching remote JSON data")
+                          message: "Fetching data for url:",
+                          value: "\(String(describing: url))")
         
-        guard let url = URLService.achievements.url
+        guard let url = url
         else {
             LoggerService.log(category: loggerCategory,
                               message: "Failed to create URL")
@@ -85,6 +95,7 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
             if response.statusCode == 200 {
                 DispatchQueue.main.async {
                     self?.remoteOutputManager?.fetchedData(data: data)
+                    completion?()
                 }
             }
             else {
