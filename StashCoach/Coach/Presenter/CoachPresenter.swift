@@ -17,11 +17,35 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
         self.interactorInput = interactorInput
     }
     
-    func achievements(achievements: [Achievement]) {
-        
+    func viewDidLoad() {
+        interactorInput?.fetchAchievements()
+    }
+    
+    func fetchedAchievements() {
+        presenterOutput?.displayAchievements()
     }
     
     func failedFetchingAchievements() {
         
+    }
+    
+    func getItemCount() -> Int {
+        interactorInput?.achievementsCount() ?? 0
+    }
+    
+    func getItem(atIndex index: Int) -> Achievement? {
+        interactorInput?.achievement(forIndex: index)
+    }
+    
+    func getImage(atIndex index: Int) {
+        interactorInput?.fetchImge(atIndex: index)
+    }
+    
+    func getLevel(atIndex index: Int) -> String? {
+        getItem(atIndex: index)?.level
+    }
+    
+    func getImageData(atIndex index: Int) -> Data? {
+        return interactorInput?.getImageData(atIndex: index)
     }
 }

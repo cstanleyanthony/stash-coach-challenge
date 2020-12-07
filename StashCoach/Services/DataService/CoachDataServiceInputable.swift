@@ -5,9 +5,10 @@
 
 import Foundation
 
+typealias FetchCompletion = ((Data)->Void)?
+
 /// A protocol to be used by either remote or local data services.
 /// Allows the interactor to request data from the data service.
 protocol CoachDataServiceInputable {
     func fetchAchievements()
-    func fetchResource(fromUrlString url: String, completion: (()->Void)?)
 }

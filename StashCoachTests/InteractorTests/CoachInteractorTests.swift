@@ -14,19 +14,20 @@ class CoachInteractorTests: XCTestCase {
     override func setUpWithError() throws {
         interactor = CoachInteractor(remoteDataService: mockRemoteDataServiceInput,
                                      interactorOutputManager: mockInteractorOutputManager)
-        mockRemoteDataServiceInput.remoteDataServiceOutput = interactor
+        mockRemoteDataServiceInput.remoteOutputManager = interactor
+        mockInteractorOutputManager.interactorInput = interactor
     }
 
     override func tearDownWithError() throws {
         
     }
 
-    func testInteractorFetchesAchievements() throws {
+    func testInteractorFetchesAchievementsAndSortsByLevel() throws {
         
         interactor?.fetchAchievements()
         
         XCTAssertNotNil(mockInteractorOutputManager.achievements, "Achievements should not be nil.")
-        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsUnordered, "Achievements should equal an array of unordered achievements.")
+        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsOrdered, "Achievements should equal an array of unordered achievements.")
     }
     
     func testFailedFetchingAcievements() throws {
@@ -41,6 +42,44 @@ class CoachInteractorTests: XCTestCase {
         interactor?.fetchAchievements()
         
         XCTAssertTrue(mockInteractorOutputManager.failureTrigggerd, "When failing to decode received data a failure should be passed back to the output.")
+    }
+    
+    func testGetsCorrectAchievementCount() throws {
+        
+        interactor?.fetchAchievements()
+        let count = interactor?.achievementsCount()
+        
+        XCTAssertEqual(count, 3, "Achievements count should equal 3.")
+    }
+    
+    func testGetsCorrectAchievementForIndex() throws {
+        
+        interactor?.fetchAchievements()
+        let index = 2
+        let achievement = interactor?.achievement(forIndex: index)
+        
+        XCTAssertEqual(achievement, MockAchievements.achievementsOrdered[index], "Returned achievement should equal the achievement at the index.")
+    }
+    
+    func testOutOfBoundsIndexForAchievementReturnNil() throws {
+        
+        interactor?.fetchAchievements()
+        
+        var index = -1
+        
+        var achievement = interactor?.achievement(forIndex: index)
+        XCTAssertNil(achievement, "Achievement should be nil if index is less than 0.")
+        
+        index = 100
+        achievement = interactor?.achievement(forIndex: index)
+        XCTAssertNil(achievement, "Achievement should be nil if index is out of bounds.")
+    }
+    
+    func testPresenterOrdersAchievementsByLevelsAscedning() throws {
+        
+//        interactor?.fetchAchievements()
+//
+//        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsOrdered, "Achievements should be ordered by level in ascending order.")
     }
 
     func testPerformanceExample() throws {

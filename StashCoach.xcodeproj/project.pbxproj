@@ -53,6 +53,9 @@
 		1F19C376257DF9E500001FBB /* CoachStarterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C375257DF9E500001FBB /* CoachStarterRouter.swift */; };
 		1F19C391257DFAE300001FBB /* CoachStarterRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */; };
 		1F19C399257DFC9200001FBB /* CoachStarterInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C398257DFC9200001FBB /* CoachStarterInteractor.swift */; };
+		1F9FD623257E9B00003F3A03 /* MockCoachPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD622257E9B00003F3A03 /* MockCoachPresenterOutput.swift */; };
+		1F9FD628257E9D07003F3A03 /* MockInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */; };
+		1F9FD62D257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +128,9 @@
 		1F19C375257DF9E500001FBB /* CoachStarterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterRouter.swift; sourceTree = "<group>"; };
 		1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterRoutable.swift; sourceTree = "<group>"; };
 		1F19C398257DFC9200001FBB /* CoachStarterInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachStarterInteractor.swift; sourceTree = "<group>"; };
+		1F9FD622257E9B00003F3A03 /* MockCoachPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoachPresenterOutput.swift; sourceTree = "<group>"; };
+		1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorInput.swift; sourceTree = "<group>"; };
+		1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachLocalDataServiceInputable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +169,7 @@
 		1F01DAF0257C2F8200E1F219 /* DataService */ = {
 			isa = PBXGroup;
 			children = (
+				1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */,
 				1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */,
 				1F01DADC257C285700E1F219 /* CoachRemoteDataServiceOutputable.swift */,
 				1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputable.swift */,
@@ -324,6 +331,8 @@
 		1F19A42B257C1A3F008225F3 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */,
+				1F9FD622257E9B00003F3A03 /* MockCoachPresenterOutput.swift */,
 				1F01DB50257C9A9A00E1F219 /* MockInteractorOutputManager.swift */,
 				1F01DB28257C611C00E1F219 /* MockRemoteServiceInput.swift */,
 				1F01DB20257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift */,
@@ -559,6 +568,7 @@
 				1F19C391257DFAE300001FBB /* CoachStarterRoutable.swift in Sources */,
 				1F19C342257DF39C00001FBB /* CoachStarterPresenterInputable.swift in Sources */,
 				1F19A34C25795945008225F3 /* SceneDelegate.swift in Sources */,
+				1F9FD62D257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift in Sources */,
 				1F19C338257DF01200001FBB /* CoachRoutable.swift in Sources */,
 				1F19C351257DF86600001FBB /* DisplayText.swift in Sources */,
 				1F19C356257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift in Sources */,
@@ -574,9 +584,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F01DB21257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift in Sources */,
+				1F9FD623257E9B00003F3A03 /* MockCoachPresenterOutput.swift in Sources */,
 				1F01DB29257C611C00E1F219 /* MockRemoteServiceInput.swift in Sources */,
 				1F19A3CC257B3B02008225F3 /* CoachPresenterTests.swift in Sources */,
 				1F19A3C7257B37AB008225F3 /* CoachInteractorTests.swift in Sources */,
+				1F9FD628257E9D07003F3A03 /* MockInteractorInput.swift in Sources */,
 				1F01DB51257C9A9A00E1F219 /* MockInteractorOutputManager.swift in Sources */,
 				1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */,
 				1F01DB0B257C3D5000E1F219 /* RemoteDataServiceTests.swift in Sources */,

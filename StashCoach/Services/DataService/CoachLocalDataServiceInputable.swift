@@ -5,7 +5,6 @@
 
 import Foundation
 
-protocol CoachPresenterOutputable: class {
+protocol CoachLocalDataServiceInputable: CoachDataServiceInputable {
     
-    func displayAchievements()
 }

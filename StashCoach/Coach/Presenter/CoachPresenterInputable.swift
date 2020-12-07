@@ -5,6 +5,12 @@
 
 import Foundation
 
-class CoachPresenterInputable {
+protocol CoachPresenterInputable {
+    var interactorInput: CoachInteractorInputable? { get set }
+    func viewDidLoad()
+    func getItemCount() -> Int
+    func getItem(atIndex index: Int) -> Achievement?
+    func getLevel(atIndex index: Int) -> String?
+    func getImageData(atIndex index: Int) -> Data?
     
 }

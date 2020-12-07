@@ -7,11 +7,15 @@ import Foundation
 
 class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputable {
     
-    let remoteDataService: CoachRemoteDataServiceInputable
+    var remoteDataService: CoachRemoteDataServiceInputable?
+    var localDataService: CoachLocalDataServiceInputable?
     
     weak var interactorOutputManager: CoachInteractorOutputable?
     
-    init(remoteDataService: CoachRemoteDataServiceInputable,
+    private var achievements = [Achievement]()
+    
+    init(remoteDataService: CoachRemoteDataServiceInputable? = nil,
+         localDataService: CoachLocalDataServiceInputable? = nil,
          interactorOutputManager: CoachInteractorOutputable? = nil) {
         
         self.remoteDataService = remoteDataService
@@ -19,7 +23,7 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     }
     
     func fetchAchievements() {
-        remoteDataService.fetchAchievements()
+        remoteDataService?.fetchAchievements()
     }
     
     func failureFetchingData() {
@@ -27,13 +31,61 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     }
     
     func fetchedData(data: Data) {
+        
+    }
+     
+    /// Runtime O(n + n + n)
+    func fetchedAchievements(data: Data) {
         do {
             let achievements = try JSONDecoder().decode(Achievements.self, from: data)
-            interactorOutputManager?.achievements(achievements: achievements.achievements)
+            let levelFiltered = achievements.achievements.filter{ Int($0.level) != nil }
+            self.achievements = levelFiltered.sorted { Int($0.level)! < Int($1.level)! }
+            for (index, achievement) in self.achievements.enumerated() {
+                if achievement.imageData == nil {
+                    fetchImge(atIndex: index)
+                }
+            }
+            interactorOutputManager?.fetchedAchievements()
         }
         catch let err {
             LoggerService.log(category: "Interactor fetched data decode", message: "Failed to decode data:", value: err.localizedDescription)
             interactorOutputManager?.failedFetchingAchievements()
         }
     }
+    
+    func fetchedImage(data: Data) {
+        // Handle image directly if desired.
+    }
+    
+    func achievementsCount() -> Int {
+        return achievements.count
+    }
+    
+    func getImageData(atIndex index: Int) -> Data? {
+        return achievements[index].imageData
+    }
+    
+    func getAllAchievements() -> [Achievement] {
+        return self.achievements
+    }
+    
+    func achievement(forIndex index: Int) -> Achievement? {
+        guard index >= 0 && index < achievements.count
+        else {
+            return nil
+        }
+        return achievements[index]
+    }
+    
+    func fetchImge(atIndex index: Int) {
+        if let achievement = self.achievement(forIndex: index) {
+            remoteDataService?.fetchImageResource(fromUrlString: achievement.imageUrl) { [weak self] data in
+                DispatchQueue.main.async {
+                    self?.achievements[index].imageData = data
+                    self?.interactorOutputManager?.fetchedAchievements()
+                }
+            }
+        }
+    }
+    
 }

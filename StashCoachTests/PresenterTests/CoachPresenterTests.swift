@@ -6,20 +6,43 @@ import XCTest
 @testable import StashCoach
 
 class CoachPresenterTests: XCTestCase {
+    
+    var presenter: (CoachPresenterInputable & CoachInteractorOutputable)?
+    let mockOutput = MockCoachPresenterOutput()
+    let mockInput = MockInteractorInput()
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        presenter = CoachPresenter(presenterOutput: mockOutput, interactorInput: mockInput)
+        mockInput.interactorOutputManager = presenter
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-    func testPresenterOrdersAchievementsByLevelsAscedning() throws {
+    
+    func testPresenterGetsCorrectItemCount() throws {
         
-//        interactor?.fetchAchievements()
-//        
-//        XCTAssertEqual(mockInteractorOutputManager.achievements, MockAchievements.achievementsOrdered, "Achievements should be ordered by level in ascending order.")
+        let itemCount = presenter?.getItemCount()
+        
+        XCTAssertEqual(itemCount, 3, "Item count should equal 3.")
+        
+    }
+    
+    func testPresenterGetsCorrectItem() throws {
+        
+        let index = 1
+        let item = presenter?.getItem(atIndex: index)
+        
+        XCTAssertEqual(item, MockAchievements.achievementsUnordered[index], "The returned item should equal the achievement at the index.")
+    }
+    
+    func testPresenterGetsCorrectLevelForAchievement() throws {
+        
+        let index = 1
+        let level = presenter?.getLevel(atIndex: index)
+        
+        XCTAssertEqual(level, MockAchievements.achievementsUnordered[index].level, "The returned level should be equal to the level of the achievement at the index.")
     }
 
     func testPerformanceExample() throws {

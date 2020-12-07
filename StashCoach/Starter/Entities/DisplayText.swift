@@ -6,5 +6,5 @@
 import Foundation
 
 struct DisplayText {
-    static let achievementsText = "Go to Achievements"
+    static let achievementsText = "Go to Coach"
 }

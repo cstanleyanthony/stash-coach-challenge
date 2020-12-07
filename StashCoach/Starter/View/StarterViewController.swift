@@ -28,6 +28,7 @@ class StarterViewController: UIViewController, CoachStarterPresenterOutputable {
     private func setupButton() {
         achievementsButton.translatesAutoresizingMaskIntoConstraints = false
         achievementsButton.backgroundColor = .purple
+        achievementsButton.layer.cornerRadius = 8
         presenter?.getAchievementText()
         view.addSubview(achievementsButton)
         setButtonConstraints()
@@ -35,8 +36,8 @@ class StarterViewController: UIViewController, CoachStarterPresenterOutputable {
     
     private func setButtonConstraints() {
         [
-            achievementsButton.widthAnchor.constraint(equalToConstant: 150),
-            achievementsButton.heightAnchor.constraint(equalToConstant: 50.0),
+            achievementsButton.widthAnchor.constraint(equalToConstant: 200),
+            achievementsButton.heightAnchor.constraint(equalToConstant: 100.0),
             achievementsButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             achievementsButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ].forEach { $0.isActive = true }
