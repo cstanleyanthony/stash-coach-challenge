@@ -6,10 +6,18 @@ import Foundation
 
 struct Achievement {
     let level: String
+    let imageUrl: String
 }
  
 extension Achievement:  Codable {
     
+}
+
+extension Achievement {
+    enum CodingKeys: String, CodingKey {
+        case level
+        case imageUrl = "bg_image_url"
+    }
 }
 
 extension Achievement: Equatable {
