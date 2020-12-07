@@ -41,6 +41,8 @@
 		1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A40B257C0FB8008225F3 /* MockAchievements.json */; };
 		1F19A422257C12C9008225F3 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A421257C12C9008225F3 /* Achievement.swift */; };
 		1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A426257C1A34008225F3 /* MockAchievements.swift */; };
+		1F19C31D257DD12300001FBB /* AchievementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C31C257DD12300001FBB /* AchievementsViewController.swift */; };
+		1F19C322257DDFEF00001FBB /* AchievementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		1F19A40B257C0FB8008225F3 /* MockAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAchievements.json; sourceTree = "<group>"; };
 		1F19A421257C12C9008225F3 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		1F19A426257C1A34008225F3 /* MockAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockAchievements.swift; path = StashCoachTests/Mocks/MockAchievements.swift; sourceTree = SOURCE_ROOT; };
+		1F19C31C257DD12300001FBB /* AchievementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsViewController.swift; sourceTree = "<group>"; };
+		1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +263,8 @@
 		1F19A401257B44D9008225F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F19C31C257DD12300001FBB /* AchievementsViewController.swift */,
+				1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */,
 				1F19A3FC257B44D3008225F3 /* CoachViewController.swift */,
 			);
 			path = View;
@@ -454,6 +460,8 @@
 				1F01DACE257C240700E1F219 /* CoachRemoteDataServiceInputable.swift in Sources */,
 				1F19A422257C12C9008225F3 /* Achievement.swift in Sources */,
 				1F01DB44257C870400E1F219 /* CoachDataServiceOutputable.swift in Sources */,
+				1F19C322257DDFEF00001FBB /* AchievementCollectionViewCell.swift in Sources */,
+				1F19C31D257DD12300001FBB /* AchievementsViewController.swift in Sources */,
 				1F19A3F4257B4450008225F3 /* Router.swift in Sources */,
 				1F01DAC6257C237400E1F219 /* CoachRemoteDataService.swift in Sources */,
 				1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */,
