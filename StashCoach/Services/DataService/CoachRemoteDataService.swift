@@ -8,11 +8,11 @@ import Foundation
 /// A remote data service that makes requests to get the data.
 /// A build configuration compiler flag is used to differentiate between the DEBUG and RELEASE configurations.
 /// The data can come from either a local JSON file or a remote server sending back JSON data.
-class CoachRemoteDataService: CoachRemoteDataServiceInputProtocol {
+class CoachRemoteDataService: CoachRemoteDataServiceInputable {
     
-    weak var remoteOutputManager: CoachRemoteDataServiceOutputProtocol?
+    weak var remoteOutputManager: CoachRemoteDataServiceOutputable?
     
-    init(remoteOutputManager: CoachRemoteDataServiceOutputProtocol? = nil) {
+    init(remoteOutputManager: CoachRemoteDataServiceOutputable? = nil) {
         self.remoteOutputManager = remoteOutputManager
     }
     

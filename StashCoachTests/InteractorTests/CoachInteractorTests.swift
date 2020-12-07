@@ -7,7 +7,7 @@ import XCTest
 
 class CoachInteractorTests: XCTestCase {
     
-    var interactor: (CoachInteractorInputProtocol & CoachRemoteDataServiceOutputProtocol)?
+    var interactor: (CoachInteractorInputable & CoachRemoteDataServiceOutputable)?
     let mockRemoteDataServiceInput = MockRemoteDataServiceInput()
     let mockInteractorOutputManager = MockInteractorOutputManager()
 

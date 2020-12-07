@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol CoachInteractorOutputProtocol: class {
+protocol CoachInteractorOutputable: class {
     
     func achievements(achievements: [Achievement])
     func failedFetchingAchievements()

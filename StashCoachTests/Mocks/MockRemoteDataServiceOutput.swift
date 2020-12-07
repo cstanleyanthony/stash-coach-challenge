@@ -5,7 +5,7 @@
 import Foundation
 @testable import StashCoach
 
-class MockRemoteDataServiceOutput: CoachRemoteDataServiceOutputProtocol {
+class MockRemoteDataServiceOutput: CoachRemoteDataServiceOutputable {
     
     var remoteData: Data?
     var receivedFailure = false

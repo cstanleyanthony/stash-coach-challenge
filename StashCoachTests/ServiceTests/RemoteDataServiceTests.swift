@@ -8,7 +8,7 @@ import XCTest
 
 class RemoteDataServiceTests: XCTestCase {
     
-    var remoteDataService: CoachRemoteDataServiceInputProtocol?
+    var remoteDataService: CoachRemoteDataServiceInputable?
     let mockRemoteServiceOutput = MockRemoteDataServiceOutput()
 
     override func setUpWithError() throws {

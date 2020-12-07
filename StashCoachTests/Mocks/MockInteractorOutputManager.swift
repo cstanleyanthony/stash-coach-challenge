@@ -6,7 +6,7 @@
 import Foundation
 @testable import StashCoach
 
-class MockInteractorOutputManager: CoachInteractorOutputProtocol {
+class MockInteractorOutputManager: CoachInteractorOutputable {
     
     var achievements: [Achievement]?
     var failureTrigggerd = false

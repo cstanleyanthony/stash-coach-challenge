@@ -5,14 +5,14 @@
 
 import Foundation
 
-class CoachInteractor: CoachInteractorInputProtocol, CoachRemoteDataServiceOutputProtocol {
+class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputable {
     
-    let remoteDataService: CoachRemoteDataServiceInputProtocol
+    let remoteDataService: CoachRemoteDataServiceInputable
     
-    weak var interactorOutputManager: CoachInteractorOutputProtocol?
+    weak var interactorOutputManager: CoachInteractorOutputable?
     
-    init(remoteDataService: CoachRemoteDataServiceInputProtocol,
-         interactorOutputManager: CoachInteractorOutputProtocol? = nil) {
+    init(remoteDataService: CoachRemoteDataServiceInputable,
+         interactorOutputManager: CoachInteractorOutputable? = nil) {
         
         self.remoteDataService = remoteDataService
         self.interactorOutputManager = interactorOutputManager

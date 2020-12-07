@@ -6,9 +6,9 @@
 import Foundation
 @testable import StashCoach
 
-class MockRemoteDataServiceInput: CoachRemoteDataServiceInputProtocol {
+class MockRemoteDataServiceInput: CoachRemoteDataServiceInputable {
     
-    weak var remoteDataServiceOutput: CoachRemoteDataServiceOutputProtocol?
+    weak var remoteDataServiceOutput: CoachRemoteDataServiceOutputable?
     
     var testFailure = false
     var testDecodeFailure = false

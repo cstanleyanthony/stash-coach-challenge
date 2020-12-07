@@ -10,7 +10,7 @@ import Foundation
 /// - `url`:  A computed property that gets built from the case of itself
 /// - `url(withBase:path:)`:  A method that can use a different base url and a non case based path,
 /// - `url(withBase:)`:  A method to use a different base url with an existing case based path.
-enum URLService: String, URLServiceProtocol {
+enum URLService: String, URLServiceable {
     
     case achievements = "/achievements"
     

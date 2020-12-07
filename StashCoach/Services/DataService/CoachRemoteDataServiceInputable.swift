@@ -6,6 +6,6 @@
 import Foundation
 
 /// A protocol to request data from a remote data service.
-protocol CoachRemoteDataServiceInputProtocol: class, CoachDataServiceInputProtocol {
+protocol CoachRemoteDataServiceInputable: class, CoachDataServiceInputable {
     
 }

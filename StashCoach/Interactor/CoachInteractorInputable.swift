@@ -5,6 +5,6 @@
 
 import Foundation
 
-protocol CoachInteractorInputProtocol {
+protocol CoachInteractorInputable {
     func fetchAchievements()
 }
