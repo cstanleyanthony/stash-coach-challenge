@@ -11,4 +11,5 @@ protocol URLServiceable {
     var baseUrl: String { get }
     var url: URL? { get }
     func url(withBase base: String, path: String) -> URL?
+    func url(withBase base: String) -> URL?
 }

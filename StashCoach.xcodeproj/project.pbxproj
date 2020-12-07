@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F014DC8257DC4930082969E /* URLServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F014DC7257DC4930082969E /* URLServiceTests.swift */; };
 		1F01DAC6257C237400E1F219 /* CoachRemoteDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */; };
 		1F01DACE257C240700E1F219 /* CoachRemoteDataServiceInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputable.swift */; };
 		1F01DAD3257C248B00E1F219 /* CoachDataServiceInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F01DAD2257C248B00E1F219 /* CoachDataServiceInputable.swift */; };
@@ -60,6 +61,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F014DC7257DC4930082969E /* URLServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLServiceTests.swift; sourceTree = "<group>"; };
 		1F01DAC5257C237400E1F219 /* CoachRemoteDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRemoteDataService.swift; sourceTree = "<group>"; };
 		1F01DACD257C240700E1F219 /* CoachRemoteDataServiceInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRemoteDataServiceInputable.swift; sourceTree = "<group>"; };
 		1F01DAD2257C248B00E1F219 /* CoachDataServiceInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachDataServiceInputable.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				1F01DB0A257C3D5000E1F219 /* RemoteDataServiceTests.swift */,
+				1F014DC7257DC4930082969E /* URLServiceTests.swift */,
 			);
 			path = ServiceTests;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				1F01DB51257C9A9A00E1F219 /* MockInteractorOutputManager.swift in Sources */,
 				1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */,
 				1F01DB0B257C3D5000E1F219 /* RemoteDataServiceTests.swift in Sources */,
+				1F014DC8257DC4930082969E /* URLServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
