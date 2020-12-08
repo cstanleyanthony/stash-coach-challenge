@@ -5,7 +5,7 @@
 
 import UIKit
 
-class CoachViewController: UIViewController, CoachPresenterOutputable {
+class CoachViewController: CustomizedViewController, CoachPresenterOutputable {
     
     weak var collectionView: UICollectionView?
     var presenter: CoachPresenterInputable?
@@ -15,6 +15,12 @@ class CoachViewController: UIViewController, CoachPresenterOutputable {
         view.backgroundColor = .white
         setupCollectionView()
         presenter?.viewDidLoad()
+        
+        setNavTitle()
+    }
+    
+    private func setNavTitle() {
+        title = presenter?.getTitle()
         
     }
     

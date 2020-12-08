@@ -70,4 +70,8 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
     func getImageData(atIndex index: Int) -> Data? {
         return interactor?.getImageData(atIndex: index)
     }
+    
+    func getTitle() -> String? {
+        return interactor?.fetchTitle()
+    }
 }

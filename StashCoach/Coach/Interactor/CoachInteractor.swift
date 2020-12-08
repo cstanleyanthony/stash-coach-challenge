@@ -13,6 +13,7 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     weak var presenter: CoachInteractorOutputable?
     
     private var achievements = [Achievement]()
+    private var overview: OverviewItems?
     
     init(remoteDataService: CoachRemoteDataServiceInputable? = nil,
          localDataService: CoachLocalDataServiceInputable? = nil,
@@ -38,6 +39,7 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
      
     /// Runtime O(n + n + n)
     func fetchedAchievements(data: Data) {
+        let loggerCategory = "Interactor fetched data decode"
         do {
             let achievements = try JSONDecoder().decode(Achievements.self, from: data)
             let levelFiltered = achievements.achievements.filter{ Int($0.level) != nil }
@@ -50,9 +52,21 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
             presenter?.fetchedAchievements()
         }
         catch let err {
-            LoggerService.log(category: "Interactor fetched data decode", message: "Failed to decode data:", value: err.localizedDescription)
+            LoggerService.log(category: loggerCategory, message: "Failed to decode achievements data:", value: err.localizedDescription)
             presenter?.failedFetchingAchievements()
         }
+        
+        do {
+            let overview = try JSONDecoder().decode(Overview.self, from: data)
+            self.overview = overview.overview
+        }
+        catch let err {
+            LoggerService.log(category: loggerCategory, message: "Failed to decode overview data:", value: err.localizedDescription)
+        }
+    }
+    
+    func fetchTitle() -> String? {
+        return overview?.title
     }
     
     func fetchedImage(data: Data) {

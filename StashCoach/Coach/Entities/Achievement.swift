@@ -35,3 +35,24 @@ extension Achievement: Equatable {
 struct Achievements: Codable {
     let achievements: [Achievement]
 }
+
+struct Overview: Codable {
+    let overview: OverviewItems
+}
+
+extension Overview: Equatable {
+    static func == (lhs: Overview, rhs: Overview) -> Bool {
+        return lhs.overview == rhs.overview
+    }
+}
+
+/// A simple struct to hold the overview items.
+struct OverviewItems: Codable {
+    let title: String
+}
+
+extension OverviewItems: Equatable {
+    static func == (lhs: OverviewItems, rhs: OverviewItems) -> Bool {
+        return lhs.title == rhs.title
+    }
+}
