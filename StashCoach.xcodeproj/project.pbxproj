@@ -57,6 +57,9 @@
 		1F9FD628257E9D07003F3A03 /* MockInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */; };
 		1F9FD62D257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */; };
 		1F9FD638257F05AF003F3A03 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD637257F05AF003F3A03 /* LevelView.swift */; };
+		1F9FD650257F422A003F3A03 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD64F257F422A003F3A03 /* ProgressView.swift */; };
+		1F9FD655257F5778003F3A03 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD654257F5778003F3A03 /* ProgressBarView.swift */; };
+		1F9FD65A257F5D64003F3A03 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD659257F5D64003F3A03 /* UIView+constraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorInput.swift; sourceTree = "<group>"; };
 		1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachLocalDataServiceInputable.swift; sourceTree = "<group>"; };
 		1F9FD637257F05AF003F3A03 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		1F9FD64F257F422A003F3A03 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		1F9FD654257F5778003F3A03 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
+		1F9FD659257F5D64003F3A03 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,7 @@
 		1F19A34825795945008225F3 /* StashCoach */ = {
 			isa = PBXGroup;
 			children = (
+				1F9FD65E257F5D6A003F3A03 /* Extensions */,
 				1F19A407257B45E7008225F3 /* Services */,
 				1F19C369257DF98D00001FBB /* Coach */,
 				1F19C35E257DF92900001FBB /* Starter */,
@@ -416,10 +423,20 @@
 		1F9FD63C257F05B9003F3A03 /* CollectionCell */ = {
 			isa = PBXGroup;
 			children = (
+				1F9FD654257F5778003F3A03 /* ProgressBarView.swift */,
+				1F9FD64F257F422A003F3A03 /* ProgressView.swift */,
 				1F9FD637257F05AF003F3A03 /* LevelView.swift */,
 				1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */,
 			);
 			path = CollectionCell;
+			sourceTree = "<group>";
+		};
+		1F9FD65E257F5D6A003F3A03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1F9FD659257F5D64003F3A03 /* UIView+constraints.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -555,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F01DAD3257C248B00E1F219 /* CoachDataServiceInputable.swift in Sources */,
+				1F9FD655257F5778003F3A03 /* ProgressBarView.swift in Sources */,
 				1F19C34C257DF6D000001FBB /* CoachStarterInteractorInputable.swift in Sources */,
 				1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */,
 				1F01DAF5257C34CA00E1F219 /* URLService.swift in Sources */,
@@ -567,6 +585,7 @@
 				1F19A422257C12C9008225F3 /* Achievement.swift in Sources */,
 				1F01DB44257C870400E1F219 /* CoachDataServiceOutputable.swift in Sources */,
 				1F19C322257DDFEF00001FBB /* AchievementCollectionViewCell.swift in Sources */,
+				1F9FD65A257F5D64003F3A03 /* UIView+constraints.swift in Sources */,
 				1F19C347257DF5E000001FBB /* CoachStarterPresenterOutputable.swift in Sources */,
 				1F19C31D257DD12300001FBB /* CoachViewController.swift in Sources */,
 				1F19A3F4257B4450008225F3 /* CoachRouter.swift in Sources */,
@@ -586,6 +605,7 @@
 				1F19A3D6257B3CB9008225F3 /* CoachInteractorInputable.swift in Sources */,
 				1F19A3EB257B4426008225F3 /* CoachPresenterInputable.swift in Sources */,
 				1F9FD638257F05AF003F3A03 /* LevelView.swift in Sources */,
+				1F9FD650257F422A003F3A03 /* ProgressView.swift in Sources */,
 				1F01DB4C257C973D00E1F219 /* CoachInteractorOutputable.swift in Sources */,
 				1F01DAE5257C2F6F00E1F219 /* LoggerService.swift in Sources */,
 			);

@@ -80,12 +80,15 @@ extension CoachViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AchievementCollectionViewCell.reuseId,
                                                             for: indexPath) as? AchievementCollectionViewCell,
-              let level = presenter?.getLevel(atIndex: indexPath.row)
+              let level = presenter?.getLevel(atIndex: indexPath.row),
+              let progressPoints = presenter?.getProgressPoints(atIndex: indexPath.row),
+              let totalPoints = presenter?.getTotalPoints(atIndex: indexPath.row),
+              let progress = presenter?.getProgress(atIndex: indexPath.row)
         else {
             return UICollectionViewCell()
         }
         
-        cell.setupCell(level: level)
+        cell.setupCell(level: level, progressPoints: progressPoints, totalPoints: totalPoints, progress: CGFloat(progress))
         
         if let imageData = presenter?.getImageData(atIndex: indexPath.row),
            let image = UIImage(data: imageData) {
