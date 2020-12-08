@@ -56,6 +56,7 @@
 		1F9FD623257E9B00003F3A03 /* MockCoachPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD622257E9B00003F3A03 /* MockCoachPresenterOutput.swift */; };
 		1F9FD628257E9D07003F3A03 /* MockInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */; };
 		1F9FD62D257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */; };
+		1F9FD638257F05AF003F3A03 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD637257F05AF003F3A03 /* LevelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		1F9FD622257E9B00003F3A03 /* MockCoachPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoachPresenterOutput.swift; sourceTree = "<group>"; };
 		1F9FD627257E9D07003F3A03 /* MockInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockInteractorInput.swift; sourceTree = "<group>"; };
 		1F9FD62C257EBA91003F3A03 /* CoachLocalDataServiceInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachLocalDataServiceInputable.swift; sourceTree = "<group>"; };
+		1F9FD637257F05AF003F3A03 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,7 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				1F19C31C257DD12300001FBB /* CoachViewController.swift */,
-				1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */,
+				1F9FD63C257F05B9003F3A03 /* CollectionCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +411,15 @@
 				1F19C390257DFAE300001FBB /* CoachStarterRoutable.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		1F9FD63C257F05B9003F3A03 /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1F9FD637257F05AF003F3A03 /* LevelView.swift */,
+				1F19C321257DDFEF00001FBB /* AchievementCollectionViewCell.swift */,
+			);
+			path = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,6 +585,7 @@
 				1F19C356257DF8FB00001FBB /* CoachStarterInteractorOutputable.swift in Sources */,
 				1F19A3D6257B3CB9008225F3 /* CoachInteractorInputable.swift in Sources */,
 				1F19A3EB257B4426008225F3 /* CoachPresenterInputable.swift in Sources */,
+				1F9FD638257F05AF003F3A03 /* LevelView.swift in Sources */,
 				1F01DB4C257C973D00E1F219 /* CoachInteractorOutputable.swift in Sources */,
 				1F01DAE5257C2F6F00E1F219 /* LoggerService.swift in Sources */,
 			);
