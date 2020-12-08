@@ -18,7 +18,7 @@ Challenge project for Stash.
 Tests were built with a (mostly) TDD strategy. The majority of the tests are for the interactor and presenter, with some covering the remote data service and URL service. All unit tests were run during the final merge from `develop` into `main`. Integration tests were left for future development for sake of time and brevity. Mocks were created to control input and output from the class being tested. The JSON data input into the tests can be controlled, as well as triggering certain failures.
 
 ### Git strategy
-This project was built using a GitFlow strategy. There is a  `main`, `develop`, `feature/`, and `fix/` branches. `feature/` branches contain individual features that, once completed, are merged into `develop`. `develop` then gathers all the features, tests the build for the release, and is merged into `main`. `fix/` branches contain bug fixes and cleanup and are then merged into `develop`.
+This project was built using a GitFlow strategy. There is a  `main`, `develop`, `feature/`, and `fix/` branches. `feature/` branches contain individual features that, once completed, are merged into `develop`. `develop` then gathers all the features, tests the build for the release, and is merged into `main`. `fix/` branches contain bug fixes and cleanup and are then merged into `develop`. Pull requests were made for each new feature, fix, or a major milestone.
 
 
 #### Thank you
