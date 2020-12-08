@@ -8,6 +8,7 @@ import UIKit
 class AchievementCollectionViewCell: UICollectionViewCell {
     
     let backgroundImage = UIImageView()
+    var levelView: LevelView?
     
     static let reuseId = "AchievementCell"
     
@@ -23,13 +24,15 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
+        return nil
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         
         backgroundImage.image = nil
+        levelView?.removeFromSuperview()
+        levelView = nil
     }
     
     func setupCell(withImage image: UIImage? = nil, level: String) {
@@ -37,6 +40,9 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         setImage(image)
         
         setupImageView()
+        if levelView == nil {
+            setupLevelView(level: level)
+        }
     }
     
     func setupImageView() {
@@ -45,17 +51,44 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(backgroundImage)
         setImageViewConstraints()
     }
-    func setImageViewConstraints() {
+    
+    func setupLevelView(level: String) {
         
-        [
+        levelView = LevelView(level: level)
+        levelView?.translatesAutoresizingMaskIntoConstraints = false
+        guard let levelView = levelView
+        else {
+            return
+        }
+        contentView.addSubview(levelView)
+        setLevelViewConstraints(toView: levelView)
+    }
+    
+    func setImageViewConstraints() {
+        buildConstraints([
             backgroundImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -25),
             backgroundImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 25),
             backgroundImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: -25),
             backgroundImage.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 25)
-        ].forEach { $0.isActive = true }
+        ])
+    }
+    
+    func setLevelViewConstraints(toView view: UIView) {
+        let radius = bounds.height * 0.5
+        buildConstraints([
+            view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            view.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            view.widthAnchor.constraint(equalToConstant: radius),
+            view.heightAnchor.constraint(equalToConstant: radius)
+        ])
     }
     
     func setImage(_ image: UIImage?) {
         backgroundImage.image = image
     }
+    
+    func buildConstraints(_ constraints: [NSLayoutConstraint]) {
+        constraints.forEach { $0.isActive = true }
+    }
+    
 }
