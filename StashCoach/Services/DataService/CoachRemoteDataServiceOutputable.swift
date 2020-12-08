@@ -7,5 +7,7 @@ import Foundation
 
 /// A protocol to be used for sending data back from the remote data service.
 protocol CoachRemoteDataServiceOutputable: CoachDataServiceOutputable {
-    
+    func fetchedAchievements(data: Data)
+    func fetchedImage(data: Data)
 }
+

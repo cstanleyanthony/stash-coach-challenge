@@ -8,7 +8,7 @@ import Foundation
 
 class MockRemoteDataServiceInput: CoachRemoteDataServiceInputable {
     
-    weak var remoteDataServiceOutput: CoachRemoteDataServiceOutputable?
+    weak var remoteOutputManager: CoachRemoteDataServiceOutputable?
     
     var testFailure = false
     var testDecodeFailure = false
@@ -16,17 +16,21 @@ class MockRemoteDataServiceInput: CoachRemoteDataServiceInputable {
     func fetchAchievements() {
 
         if testFailure {
-            remoteDataServiceOutput?.failureFetchingData()
+            remoteOutputManager?.failureFetchingData()
         }
         else if testDecodeFailure {
-            remoteDataServiceOutput?.fetchedData(data: Data())
+            remoteOutputManager?.fetchedAchievements(data: Data())
         }
         else {
-            remoteDataServiceOutput?.fetchedData(data: MockAchievements.jsonAchievements)
+            remoteOutputManager?.fetchedAchievements(data: MockAchievements.jsonAchievements)
         }
     }
     
-    func fetchResource(fromUrlString url: String, completion: (()->Void)? = nil) {
+    func fetchData(fromUrl url: URL?, completion: FetchCompletion) {
+        
+    }
+    
+    func fetchImageResource(fromUrlString url: String, completion: FetchCompletion) {
         
     }
 }

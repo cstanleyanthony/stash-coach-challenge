@@ -20,18 +20,28 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
     func fetchAchievements() {
         
         #if DEBUG
-        fetchLocalJSON()
+        fetchLocalJSON() { [weak self] data in
+            self?.remoteOutputManager?.fetchedAchievements(data: data)
+        }
         #else
-        fetchRemoteJSON()
+        fetchRemoteJSON() { [weak self] data in
+            self?.remoteOutputManager?.fetchedAchievements(data: data)
+        }
         #endif
     }
     
-    func fetchResource(fromUrlString url: String, completion: (()->Void)? = nil) {
+    func fetchImageResource(fromUrlString url: String, completion: FetchCompletion = nil) {
         
-        fetchData(fromUrl: URL(string: url), completion: completion)
+        let loggerCategory = "Remote data service resource fetch"
+        LoggerService.log(category: loggerCategory, message: "Fetching a resource")
+        
+        /// If a completion is provided, use that one, if not use one to send the data back to the output manager.
+        fetchData(fromUrl: URL(string: url), completion: completion ?? { [weak self] data in
+            self?.remoteOutputManager?.fetchedImage(data: data)
+        })
     }
     
-    private func fetchLocalJSON() {
+    private func fetchLocalJSON(completion: FetchCompletion = nil) {
         
         let loggerCategory = "Remote data service local fetch"
         LoggerService.log(category: loggerCategory,
@@ -50,14 +60,21 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
             return
         }
         
-        remoteOutputManager?.fetchedData(data: data)
+        remoteOutputManager?.fetchedAchievements(data: data)
     }
     
-    private func fetchRemoteJSON() {
+    private func fetchRemoteJSON(completion: FetchCompletion = nil) {
+        let loggerCategory = "Remote data service remote fetch"
+        LoggerService.log(category: loggerCategory, message: "Fetching remote JSON.")
+        
         fetchData(fromUrl: URLService.achievements.url)
     }
     
-    private func fetchData(fromUrl url: URL?, completion: (()->Void)? = nil) {
+    /// Fetches data from a remote resource. A private method to be used by internal or extended methods.
+    /// - Parameters:
+    ///     - fromUrl: A URL optional. The URL will be checked before running task.
+    ///     - completion: A completion optional that is used to call back to a method receiving the data. Usually used by a remote output manager
+    func fetchData(fromUrl url: URL?, completion: FetchCompletion = nil) {
         
         let loggerCategory = "Remote data service fetch data"
         LoggerService.log(category: loggerCategory,
@@ -95,7 +112,7 @@ class CoachRemoteDataService: CoachRemoteDataServiceInputable {
             if response.statusCode == 200 {
                 DispatchQueue.main.async {
                     self?.remoteOutputManager?.fetchedData(data: data)
-                    completion?()
+                    completion?(data)
                 }
             }
             else {

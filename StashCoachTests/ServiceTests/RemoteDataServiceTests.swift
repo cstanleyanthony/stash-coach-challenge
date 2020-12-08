@@ -46,9 +46,10 @@ class RemoteDataServiceTests: XCTestCase {
     
     func testFetchingResourceFromUrl() throws {
         let expectation = XCTestExpectation(description: "Requesting resource")
-        remoteDataService?.fetchResource(fromUrlString: MockAchievements.achievement1.imageUrl) {
+        remoteDataService?.fetchImageResource(fromUrlString: MockAchievements.achievement1.imageUrl) {_ in 
             expectation.fulfill()
         }
+        
         wait(for: [expectation], timeout: 5.0)
         XCTAssertNotNil(mockRemoteServiceOutput.remoteData, "Fetched image data should not be nil.")
     }
