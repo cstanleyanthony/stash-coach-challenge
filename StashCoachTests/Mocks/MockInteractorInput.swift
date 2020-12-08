@@ -44,5 +44,9 @@ class MockInteractorInput: CoachInteractorInputable {
         return nil
     }
     
+    func fetchTitle() -> String? {
+        return "Smart Investing"
+    }
+    
     
 }

@@ -17,8 +17,7 @@ class CoachStarterRouter: CoachStarterRoutable {
         starterVC.presenter = starterPresenter
         starterPresenter.interactorInput = starterInteractor
         
-        let navController = UINavigationController(rootViewController: starterVC)
-        
+        let navController = CoachNavigationController(rootViewController: starterVC)
         return navController
         
     }

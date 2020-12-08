@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StarterViewController: UIViewController, CoachStarterPresenterOutputable {
+class StarterViewController: CustomizedViewController, CoachStarterPresenterOutputable {
     
     var presenter: CoachStarterPresenterInputable?
     

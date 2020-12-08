@@ -15,4 +15,5 @@ protocol CoachInteractorInputable {
     func getImageData(atIndex index: Int) -> Data?
     func achievement(forIndex index: Int) -> Achievement?
     func fetchImge(atIndex index: Int)
+    func fetchTitle() -> String?
 }
