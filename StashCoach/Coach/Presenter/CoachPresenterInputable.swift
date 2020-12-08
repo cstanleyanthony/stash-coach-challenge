@@ -13,6 +13,9 @@ protocol CoachPresenterInputable {
     func getItemCount() -> Int
     func getItem(atIndex index: Int) -> Achievement?
     func getLevel(atIndex index: Int) -> String?
+    func getProgressPoints(atIndex index: Int) -> String?
+    func getTotalPoints(atIndex index: Int) -> String?
+    func getProgress(atIndex index: Int) -> Double?
     func getImageData(atIndex index: Int) -> Data?
     
 }

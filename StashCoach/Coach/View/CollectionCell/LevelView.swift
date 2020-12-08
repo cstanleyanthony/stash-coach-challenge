@@ -7,13 +7,11 @@ import UIKit
 
 class LevelView: UIView {
     
-    private let level: String
     private let circleLayer = CAShapeLayer()
     private let titleLabel = UILabel()
     private let levelLabel = UILabel()
     
     init(frame: CGRect = CGRect.zero, level: String) {
-        self.level = level
         super.init(frame: frame)
         
         backgroundColor = .clear
@@ -40,7 +38,7 @@ class LevelView: UIView {
     private func addText(level: String) {
         
         addTitleLabel()
-        addLevelLabel()
+        addLevelLabel(level: level)
         
         layer.insertSublayer(circleLayer, below: titleLabel.layer)
     }
@@ -54,10 +52,10 @@ class LevelView: UIView {
         titleLabel.adjustsFontSizeToFitWidth = true
         titleLabel.minimumScaleFactor = 0.5
         addSubview(titleLabel)
-        addTitleLabelConstraints(forView: titleLabel)
+        addTitleLabelConstraints(titleLabel)
     }
     
-    private func addLevelLabel() {
+    private func addLevelLabel(level: String) {
         levelLabel.translatesAutoresizingMaskIntoConstraints = false
         levelLabel.text = level
         levelLabel.textAlignment = .center
@@ -66,10 +64,10 @@ class LevelView: UIView {
         levelLabel.minimumScaleFactor = 0.5
         levelLabel.adjustsFontSizeToFitWidth = true
         addSubview(levelLabel)
-        addLevelLabelConstraints(forView: levelLabel)
+        addLevelLabelConstraints(levelLabel)
     }
     
-    func addTitleLabelConstraints(forView view: UIView) {
+    func addTitleLabelConstraints(_ view: UIView) {
         buildConstraints([
             view.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -15),
             view.heightAnchor.constraint(lessThanOrEqualTo: heightAnchor, multiplier: 0.2),
@@ -77,16 +75,12 @@ class LevelView: UIView {
         ])
     }
     
-    func addLevelLabelConstraints(forView view: UIView) {
+    func addLevelLabelConstraints(_ view: UIView) {
         buildConstraints([
             view.topAnchor.constraint(equalTo: centerYAnchor, constant: -25),
             view.centerXAnchor.constraint(equalTo: centerXAnchor),
             view.heightAnchor.constraint(lessThanOrEqualTo: heightAnchor, multiplier: 0.7)
         ])
-    }
-    
-    func buildConstraints(_ constraints: [NSLayoutConstraint]) {
-        constraints.forEach { $0.isActive = true }
     }
 }
 

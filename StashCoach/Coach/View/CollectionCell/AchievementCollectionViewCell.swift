@@ -9,13 +9,14 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     
     let backgroundImage = UIImageView()
     var levelView: LevelView?
+    var progressView: ProgressView?
     
     static let reuseId = "AchievementCell"
     
     /// Set the width to be a percent of the parent view
     static let widthMultiple: CGFloat = 0.85
     /// Set the height to be a percent of the the parent view
-    static let heightMultiple: CGFloat = 0.75
+    static let heightMultiple: CGFloat = 0.6
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,15 +34,27 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         backgroundImage.image = nil
         levelView?.removeFromSuperview()
         levelView = nil
+        
+        progressView?.removeFromSuperview()
+        progressView = nil
     }
     
-    func setupCell(withImage image: UIImage? = nil, level: String) {
+    func setupCell(withImage image: UIImage? = nil,
+                   level: String,
+                   progressPoints: String,
+                   totalPoints: String,
+                   progress: CGFloat) {
         clipsToBounds = true
         setImage(image)
         
         setupImageView()
+        
         if levelView == nil {
             setupLevelView(level: level)
+        }
+        
+        if progressView == nil {
+            setupProgressView(progressPoints: progressPoints, totalPoints: totalPoints, progress: progress)
         }
     }
     
@@ -55,16 +68,25 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     func setupLevelView(level: String) {
         
         levelView = LevelView(level: level)
-        levelView?.translatesAutoresizingMaskIntoConstraints = false
         guard let levelView = levelView
         else {
             return
         }
-        contentView.addSubview(levelView)
-        setLevelViewConstraints(toView: levelView)
+        addNewSubview(levelView)
+        setLevelViewConstraints(levelView)
     }
     
-    func setImageViewConstraints() {
+    func setupProgressView(progressPoints: String, totalPoints: String, progress: CGFloat) {
+        progressView = ProgressView(progressPoints: progressPoints, totalPoints: totalPoints, progress: progress)
+        guard let progressView = progressView
+        else {
+            return
+        }
+        addNewSubview(progressView)
+        setProgressViewConstraints(progressView)
+    }
+    
+    private func setImageViewConstraints() {
         buildConstraints([
             backgroundImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: -25),
             backgroundImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 25),
@@ -73,7 +95,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    func setLevelViewConstraints(toView view: UIView) {
+    private func setLevelViewConstraints(_ view: UIView) {
         let radius = bounds.height * 0.5
         buildConstraints([
             view.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
@@ -83,12 +105,23 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         ])
     }
     
+    private func setProgressViewConstraints(_ view: UIView) {
+        buildConstraints([
+            view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+            view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
+            view.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            view.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -60)
+        ])
+    }
+    
     func setImage(_ image: UIImage?) {
         backgroundImage.image = image
     }
     
-    func buildConstraints(_ constraints: [NSLayoutConstraint]) {
-        constraints.forEach { $0.isActive = true }
+    private func addNewSubview(_ view: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
     }
     
 }

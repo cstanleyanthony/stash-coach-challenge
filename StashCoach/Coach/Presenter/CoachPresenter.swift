@@ -4,6 +4,7 @@
 	
 
 import Foundation
+import CoreGraphics
 
 class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
 
@@ -43,6 +44,27 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
     
     func getLevel(atIndex index: Int) -> String? {
         getItem(atIndex: index)?.level
+    }
+    
+    func getProgressPoints(atIndex index: Int) -> String? {
+        if let item = getItem(atIndex: index) {
+            return "\(item.progress)" + "pts"
+        }
+        return nil
+    }
+    
+    func getTotalPoints(atIndex index: Int) -> String? {
+        if let item = getItem(atIndex: index) {
+            return "\(item.total)" + "pts"
+        }
+        return nil
+    }
+    
+    func getProgress(atIndex index: Int) -> Double? {
+        if let item = getItem(atIndex: index) {
+            return Double(item.progress) / Double(item.total)
+        }
+        return nil
     }
     
     func getImageData(atIndex index: Int) -> Data? {

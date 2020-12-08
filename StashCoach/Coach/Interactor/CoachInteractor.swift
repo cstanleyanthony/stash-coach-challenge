@@ -72,7 +72,7 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     }
     
     func achievement(forIndex index: Int) -> Achievement? {
-        guard index >= 0 && index < achievements.count
+        guard checkIndexInBounds(index)
         else {
             return nil
         }
@@ -86,6 +86,10 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
                 self?.presenter?.fetchedAchievements()
             }
         }
+    }
+    
+    private func checkIndexInBounds(_ index: Int) -> Bool {
+        return index >= 0 && index < achievements.count
     }
     
 }
