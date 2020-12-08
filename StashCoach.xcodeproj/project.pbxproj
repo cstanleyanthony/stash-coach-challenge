@@ -38,7 +38,6 @@
 		1F19A3E3257B4419008225F3 /* CoachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3E2257B4419008225F3 /* CoachPresenter.swift */; };
 		1F19A3EB257B4426008225F3 /* CoachPresenterInputable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3EA257B4426008225F3 /* CoachPresenterInputable.swift */; };
 		1F19A3F4257B4450008225F3 /* CoachRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A3F3257B4450008225F3 /* CoachRouter.swift */; };
-		1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F19A40B257C0FB8008225F3 /* MockAchievements.json */; };
 		1F19A422257C12C9008225F3 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A421257C12C9008225F3 /* Achievement.swift */; };
 		1F19A427257C1A34008225F3 /* MockAchievements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19A426257C1A34008225F3 /* MockAchievements.swift */; };
 		1F19C31D257DD12300001FBB /* CoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F19C31C257DD12300001FBB /* CoachViewController.swift */; };
@@ -120,7 +119,6 @@
 		1F19A3E2257B4419008225F3 /* CoachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenter.swift; sourceTree = "<group>"; };
 		1F19A3EA257B4426008225F3 /* CoachPresenterInputable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachPresenterInputable.swift; sourceTree = "<group>"; };
 		1F19A3F3257B4450008225F3 /* CoachRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachRouter.swift; sourceTree = "<group>"; };
-		1F19A40B257C0FB8008225F3 /* MockAchievements.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockAchievements.json; sourceTree = "<group>"; };
 		1F19A421257C12C9008225F3 /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Achievement.swift; sourceTree = "<group>"; };
 		1F19A426257C1A34008225F3 /* MockAchievements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MockAchievements.swift; path = StashCoachTests/Mocks/MockAchievements.swift; sourceTree = SOURCE_ROOT; };
 		1F19C31C257DD12300001FBB /* CoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoachViewController.swift; sourceTree = "<group>"; };
@@ -304,6 +302,7 @@
 		1F19A401257B44D9008225F3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1FD7DAFF257FED8C000761E1 /* CoachNavigationController.swift */,
 				1F19C31C257DD12300001FBB /* CoachViewController.swift */,
 				1FD7DB04257FF83A000761E1 /* CustomizedViewController.swift */,
 				1F9FD63C257F05B9003F3A03 /* CollectionCell */,
@@ -354,7 +353,6 @@
 				1F01DB28257C611C00E1F219 /* MockRemoteServiceInput.swift */,
 				1F01DB20257C5C3600E1F219 /* MockRemoteDataServiceOutput.swift */,
 				1F19A426257C1A34008225F3 /* MockAchievements.swift */,
-				1F19A40B257C0FB8008225F3 /* MockAchievements.json */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -414,7 +412,6 @@
 		1F19C371257DF9B200001FBB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1FD7DAFF257FED8C000761E1 /* CoachNavigationController.swift */,
 				1F19A34D25795945008225F3 /* StarterViewController.swift */,
 			);
 			path = View;
@@ -562,7 +559,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F19A40C257C0FB8008225F3 /* MockAchievements.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

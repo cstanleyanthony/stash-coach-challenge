@@ -69,7 +69,7 @@ class LevelView: UIView {
     
     func addTitleLabelConstraints(_ view: UIView) {
         buildConstraints([
-            view.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -15),
+            view.bottomAnchor.constraint(equalTo: centerYAnchor, constant: -12),
             view.heightAnchor.constraint(lessThanOrEqualTo: heightAnchor, multiplier: 0.2),
             view.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
