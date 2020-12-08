@@ -26,7 +26,8 @@ class CoachNavigationController: UINavigationController {
     }
     
     private func setTitleColor() {
-        UINavigationBar.appearance().titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().titleTextAttributes =  [NSAttributedString.Key.foregroundColor: UIColor.white,
+                                                             NSAttributedString.Key.font: UIFont(name: "EuphemiaUCAS", size: 16) as Any]
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
