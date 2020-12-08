@@ -30,12 +30,12 @@ class CoachInteractorTests: XCTestCase {
         XCTAssertEqual(mockPresenter.achievements, MockAchievements.achievementsOrdered, "Achievements should equal an array of unordered achievements.")
     }
     
-    func testFetchesOverview() throws {
+    func testFetchesOverviewTitleCorrectly() throws {
         
         interactor?.fetchAchievements()
         
-        XCTAssertNotNil(mockPresenter.overview, "Overview should not be nil.")
-        XCTAssertEqual(mockPresenter.overview, MockAchievements.overview, "Overview should equal the provided overview.")
+        XCTAssertNotNil(interactor?.fetchTitle(), "Overview should not be nil.")
+        XCTAssertEqual(interactor?.fetchTitle(), MockAchievements.overviewItems.title, "Overview should equal the provided overview.")
     }
     
     func testFailedFetchingAcievements() throws {

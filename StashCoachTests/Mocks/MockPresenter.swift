@@ -12,7 +12,6 @@ class MockPresenter: CoachInteractorOutputable {
     var interactor: CoachInteractorInputable?
 
     var achievements: [Achievement]?
-    var overview: Overview?
     
     var failureTrigggerd = false
     
