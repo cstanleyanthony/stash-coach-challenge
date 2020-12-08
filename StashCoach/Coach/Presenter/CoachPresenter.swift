@@ -27,7 +27,7 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
     }
     
     func failedFetchingAchievements() {
-        
+        view?.displayFailureAlert()
     }
     
     func getItemCount() -> Int {
