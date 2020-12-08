@@ -10,14 +10,16 @@ struct Achievement {
     let total: Int
     let imageUrl: String
     var imageData: Data?
+    let accessible: Bool
 }
 
 extension Achievement: Codable {
     enum CodingKeys: String, CodingKey {
-        case level
-        case progress
-        case total
-        case imageUrl = "bg_image_url"
+        case level,
+             progress,
+             total,
+             imageUrl = "bg_image_url",
+             accessible
     }
 }
 
@@ -28,6 +30,7 @@ extension Achievement: Equatable {
             && lhs.progress == rhs.progress
             && lhs.imageUrl == rhs.imageUrl
             && lhs.imageData == rhs.imageData
+            && lhs.accessible == rhs.accessible
     }
 }
 

@@ -15,17 +15,20 @@ struct MockAchievements {
                                           progress: 10,
                                           total: 50,
                                           imageUrl: "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C850B103-B8C5-4518-8631-168BB42FFBBD.png",
-                                          imageData: nil)
+                                          imageData: nil,
+                                          accessible: true)
     static let achievement2 = Achievement(level: "2",
                                           progress: 0,
                                           total: 50,
                                           imageUrl: "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/341E40C8-1C2A-400C-B67D-F490B74BDD81.png",
-                                          imageData: nil)
+                                          imageData: nil,
+                                          accessible: false)
     static let achievement3 = Achievement(level: "3",
                                           progress: 0,
                                           total: 50,
                                           imageUrl: "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C60F6868-A0CD-4D9D-A3B9-3C460FA989FF.png",
-                                          imageData: nil)
+                                          imageData: nil,
+                                          accessible: false)
     
     static let achievementsUnordered: [Achievement] = [
         achievement1,
@@ -50,19 +53,22 @@ struct MockAchievements {
             "level": "1",
             "progress": 10,
             "total": 50,
-            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C850B103-B8C5-4518-8631-168BB42FFBBD.png"
+            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C850B103-B8C5-4518-8631-168BB42FFBBD.png",
+            "accessible": true
         },
         {
             "level": "3",
             "progress": 0,
             "total": 50,
-            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C60F6868-A0CD-4D9D-A3B9-3C460FA989FF.png"
+            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/C60F6868-A0CD-4D9D-A3B9-3C460FA989FF.png",
+            "accessible": false
         },
         {
             "level": "2",
             "progress": 0,
             "total": 50,
-            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/341E40C8-1C2A-400C-B67D-F490B74BDD81.png"
+            "bg_image_url": "https://cdn.zeplin.io/5a5f7e1b4f9f24b874e0f19f/screens/341E40C8-1C2A-400C-B67D-F490B74BDD81.png",
+            "accessible": false
         }
     ]
 }
