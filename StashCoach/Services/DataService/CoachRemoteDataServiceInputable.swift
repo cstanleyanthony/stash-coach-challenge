@@ -7,5 +7,7 @@ import Foundation
 
 /// A protocol to request data from a remote data service.
 protocol CoachRemoteDataServiceInputable: class, CoachDataServiceInputable {
-    
+    var remoteOutputManager: CoachRemoteDataServiceOutputable? { get set }
+    func fetchImageResource(fromUrlString url: String, completion: FetchCompletion)
+    func fetchData(fromUrl url: URL?, completion: FetchCompletion)
 }

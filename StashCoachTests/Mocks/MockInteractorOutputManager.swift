@@ -6,10 +6,17 @@
 import Foundation
 @testable import StashCoach
 
-class MockInteractorOutputManager: CoachInteractorOutputable {
+class MockPresenter: CoachInteractorOutputable {
     
+    weak var view: CoachPresenterOutputable?
+    var interactor: CoachInteractorInputable?
+
     var achievements: [Achievement]?
     var failureTrigggerd = false
+    
+    func fetchedAchievements() {
+        achievements = interactor?.getAllAchievements()
+    }
     
     func achievements(achievements: [Achievement]) {
         self.achievements = achievements
@@ -17,6 +24,10 @@ class MockInteractorOutputManager: CoachInteractorOutputable {
     
     func failedFetchingAchievements() {
         failureTrigggerd = true
+    }
+    
+    func receivedImage(imageData data: Data) {
+        
     }
     
 }
