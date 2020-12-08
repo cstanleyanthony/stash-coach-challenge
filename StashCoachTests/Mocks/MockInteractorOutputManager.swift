@@ -6,16 +6,16 @@
 import Foundation
 @testable import StashCoach
 
-class MockInteractorOutputManager: CoachInteractorOutputable {
+class MockPresenter: CoachInteractorOutputable {
     
-    weak var presenterOutput: CoachPresenterOutputable?
-    var interactorInput: CoachInteractorInputable?
+    weak var view: CoachPresenterOutputable?
+    var interactor: CoachInteractorInputable?
 
     var achievements: [Achievement]?
     var failureTrigggerd = false
     
     func fetchedAchievements() {
-        achievements = interactorInput?.getAllAchievements()
+        achievements = interactor?.getAllAchievements()
     }
     
     func achievements(achievements: [Achievement]) {

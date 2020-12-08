@@ -6,23 +6,23 @@
 import Foundation
 
 class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
-    
-    weak var presenterOutput: CoachPresenterOutputable?
+
+    weak var view: CoachPresenterOutputable?
     var router: CoachRoutable?
-    var interactorInput: CoachInteractorInputable?
+    var interactor: CoachInteractorInputable?
     
-    init(presenterOutput: CoachPresenterOutputable? = nil, router: CoachRoutable? = nil, interactorInput: CoachInteractorInputable? = nil) {
-        self.presenterOutput = presenterOutput
+    init(view: CoachPresenterOutputable? = nil, router: CoachRoutable? = nil, interactor: CoachInteractorInputable? = nil) {
+        self.view = view
         self.router = router
-        self.interactorInput = interactorInput
+        self.interactor = interactor
     }
     
     func viewDidLoad() {
-        interactorInput?.fetchAchievements()
+        interactor?.fetchAchievements()
     }
     
     func fetchedAchievements() {
-        presenterOutput?.displayAchievements()
+        view?.displayAchievements()
     }
     
     func failedFetchingAchievements() {
@@ -30,15 +30,15 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
     }
     
     func getItemCount() -> Int {
-        interactorInput?.achievementsCount() ?? 0
+        interactor?.achievementsCount() ?? 0
     }
     
     func getItem(atIndex index: Int) -> Achievement? {
-        interactorInput?.achievement(forIndex: index)
+        interactor?.achievement(forIndex: index)
     }
     
     func getImage(atIndex index: Int) {
-        interactorInput?.fetchImge(atIndex: index)
+        interactor?.fetchImge(atIndex: index)
     }
     
     func getLevel(atIndex index: Int) -> String? {
@@ -46,6 +46,6 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
     }
     
     func getImageData(atIndex index: Int) -> Data? {
-        return interactorInput?.getImageData(atIndex: index)
+        return interactor?.getImageData(atIndex: index)
     }
 }

@@ -9,7 +9,7 @@ class CoachViewController: UIViewController, CoachPresenterOutputable {
     
     weak var collectionView: UICollectionView?
     var presenter: CoachPresenterInputable?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -92,9 +92,7 @@ extension CoachViewController: UICollectionViewDelegate, UICollectionViewDataSou
             cell.setImage(image)
         }
         
-        
         return cell
     }
-    
     
 }

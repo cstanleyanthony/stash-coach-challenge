@@ -8,17 +8,16 @@ import Foundation
 
 class MockInteractorInput: CoachInteractorInputable {
     
-    
     var remoteDataService: CoachRemoteDataServiceInputable?
     
     var localDataService: CoachLocalDataServiceInputable?
     
-    weak var interactorOutputManager: CoachInteractorOutputable?
+    weak var presenter: CoachInteractorOutputable?
     
     let achievements = MockAchievements.achievementsOrdered
     
-    init(output: CoachInteractorOutputable? = nil) {
-        self.interactorOutputManager = output
+    init(presenter: CoachInteractorOutputable? = nil) {
+        self.presenter = presenter
     }
     
     func fetchAchievements() {
@@ -39,6 +38,10 @@ class MockInteractorInput: CoachInteractorInputable {
     
     func fetchImge(atIndex index: Int) {
         
+    }
+    
+    func getImageData(atIndex index: Int) -> Data? {
+        return nil
     }
     
     

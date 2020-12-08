@@ -12,14 +12,14 @@ class CoachRouter: CoachRoutable {
         
         let view = CoachViewController()
         let router = CoachRouter()
-        let presenter = CoachPresenter(presenterOutput: view, router: router)
+        let presenter = CoachPresenter(view: view, router: router)
         let dataService = CoachRemoteDataService()
-        let interactor = CoachInteractor(remoteDataService: dataService, interactorOutputManager: presenter)
+        let interactor = CoachInteractor(remoteDataService: dataService, presenter: presenter)
         
         view.presenter = presenter
-        presenter.interactorInput = interactor
+        presenter.interactor = interactor
         dataService.remoteOutputManager = interactor
-        interactor.interactorOutputManager = presenter
+        interactor.presenter = presenter
         
         return view
         

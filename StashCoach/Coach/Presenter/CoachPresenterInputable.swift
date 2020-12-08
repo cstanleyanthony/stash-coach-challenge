@@ -6,7 +6,9 @@
 import Foundation
 
 protocol CoachPresenterInputable {
-    var interactorInput: CoachInteractorInputable? { get set }
+    var view: CoachPresenterOutputable? { get set }
+    var interactor: CoachInteractorInputable? { get set }
+    var router: CoachRoutable? { get set }
     func viewDidLoad()
     func getItemCount() -> Int
     func getItem(atIndex index: Int) -> Achievement?

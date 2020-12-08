@@ -13,8 +13,8 @@ class CoachPresenterTests: XCTestCase {
 
     override func setUpWithError() throws {
         
-        presenter = CoachPresenter(presenterOutput: mockOutput, interactorInput: mockInput)
-        mockInput.interactorOutputManager = presenter
+        presenter = CoachPresenter(view: mockOutput, interactor: mockInput)
+        mockInput.presenter = presenter
     }
 
     override func tearDownWithError() throws {
@@ -34,7 +34,7 @@ class CoachPresenterTests: XCTestCase {
         let index = 1
         let item = presenter?.getItem(atIndex: index)
         
-        XCTAssertEqual(item, MockAchievements.achievementsUnordered[index], "The returned item should equal the achievement at the index.")
+        XCTAssertEqual(item, MockAchievements.achievementsOrdered[index], "The returned item should equal the achievement at the index.")
     }
     
     func testPresenterGetsCorrectLevelForAchievement() throws {
@@ -42,7 +42,7 @@ class CoachPresenterTests: XCTestCase {
         let index = 1
         let level = presenter?.getLevel(atIndex: index)
         
-        XCTAssertEqual(level, MockAchievements.achievementsUnordered[index].level, "The returned level should be equal to the level of the achievement at the index.")
+        XCTAssertEqual(level, MockAchievements.achievementsOrdered[index].level, "The returned level should be equal to the level of the achievement at the index.")
     }
 
     func testPerformanceExample() throws {

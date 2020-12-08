@@ -41,6 +41,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     
     func setupImageView() {
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        backgroundImage.contentMode = .scaleAspectFill
         contentView.addSubview(backgroundImage)
         setImageViewConstraints()
     }

@@ -10,16 +10,16 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     var remoteDataService: CoachRemoteDataServiceInputable?
     var localDataService: CoachLocalDataServiceInputable?
     
-    weak var interactorOutputManager: CoachInteractorOutputable?
+    weak var presenter: CoachInteractorOutputable?
     
     private var achievements = [Achievement]()
     
     init(remoteDataService: CoachRemoteDataServiceInputable? = nil,
          localDataService: CoachLocalDataServiceInputable? = nil,
-         interactorOutputManager: CoachInteractorOutputable? = nil) {
+         presenter: CoachInteractorOutputable? = nil) {
         
         self.remoteDataService = remoteDataService
-        self.interactorOutputManager = interactorOutputManager
+        self.presenter = presenter
     }
     
     func fetchAchievements() {
@@ -27,9 +27,11 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     }
     
     func failureFetchingData() {
-        interactorOutputManager?.failedFetchingAchievements()
+        presenter?.failedFetchingAchievements()
     }
     
+    /// Receives the raw data from a data service. Can be used when a dedicated method to fetch data is not needed.
+    /// - Description: Use this method when fetching a one off chunk of data and can parse it manually.
     func fetchedData(data: Data) {
         
     }
@@ -45,11 +47,11 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
                     fetchImge(atIndex: index)
                 }
             }
-            interactorOutputManager?.fetchedAchievements()
+            presenter?.fetchedAchievements()
         }
         catch let err {
             LoggerService.log(category: "Interactor fetched data decode", message: "Failed to decode data:", value: err.localizedDescription)
-            interactorOutputManager?.failedFetchingAchievements()
+            presenter?.failedFetchingAchievements()
         }
     }
     
@@ -80,10 +82,8 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
     func fetchImge(atIndex index: Int) {
         if let achievement = self.achievement(forIndex: index) {
             remoteDataService?.fetchImageResource(fromUrlString: achievement.imageUrl) { [weak self] data in
-                DispatchQueue.main.async {
-                    self?.achievements[index].imageData = data
-                    self?.interactorOutputManager?.fetchedAchievements()
-                }
+                self?.achievements[index].imageData = data
+                self?.presenter?.fetchedAchievements()
             }
         }
     }

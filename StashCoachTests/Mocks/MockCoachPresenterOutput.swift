@@ -8,6 +8,8 @@ import Foundation
 
 class MockCoachPresenterOutput: CoachPresenterOutputable {
     
+    var presenter: CoachPresenterInputable?
+    
     var itemCount: Int?
     
     func displayAchievements() {

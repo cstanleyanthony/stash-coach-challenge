@@ -8,7 +8,7 @@ import Foundation
 protocol CoachInteractorInputable {
     var remoteDataService: CoachRemoteDataServiceInputable? { get set }
     var localDataService: CoachLocalDataServiceInputable? { get set }
-    var interactorOutputManager: CoachInteractorOutputable? { get set }
+    var presenter: CoachInteractorOutputable? { get set }
     func fetchAchievements()
     func getAllAchievements() -> [Achievement]
     func achievementsCount() -> Int
