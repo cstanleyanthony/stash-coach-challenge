@@ -27,7 +27,7 @@ class StarterViewController: CustomizedViewController, CoachStarterPresenterOutp
 
     private func setupButton() {
         achievementsButton.translatesAutoresizingMaskIntoConstraints = false
-        achievementsButton.backgroundColor = .purple
+        achievementsButton.backgroundColor = Constants.Colors.navigationPurple.color()
         achievementsButton.layer.cornerRadius = 8
         presenter?.getAchievementText()
         view.addSubview(achievementsButton)
