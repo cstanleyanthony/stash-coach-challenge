@@ -20,7 +20,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .lightGray
+        backgroundColor = .white
         layer.cornerRadius = 8
     }
     
@@ -43,7 +43,8 @@ class AchievementCollectionViewCell: UICollectionViewCell {
                    level: String,
                    progressPoints: String,
                    totalPoints: String,
-                   progress: CGFloat) {
+                   progress: CGFloat,
+                   accessible: Bool) {
         clipsToBounds = true
         setImage(image)
         
@@ -56,6 +57,10 @@ class AchievementCollectionViewCell: UICollectionViewCell {
         if progressView == nil {
             setupProgressView(progressPoints: progressPoints, totalPoints: totalPoints, progress: progress)
         }
+        
+        isUserInteractionEnabled = accessible
+        
+        contentView.alpha = accessible ? 1.0 : 0.35
     }
     
     func setupImageView() {

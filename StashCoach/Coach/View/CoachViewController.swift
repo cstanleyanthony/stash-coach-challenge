@@ -89,12 +89,17 @@ extension CoachViewController: UICollectionViewDelegate, UICollectionViewDataSou
               let level = presenter?.getLevel(atIndex: indexPath.row),
               let progressPoints = presenter?.getProgressPoints(atIndex: indexPath.row),
               let totalPoints = presenter?.getTotalPoints(atIndex: indexPath.row),
-              let progress = presenter?.getProgress(atIndex: indexPath.row)
+              let progress = presenter?.getProgress(atIndex: indexPath.row),
+              let accessible = presenter?.getAccessible(atIndex: indexPath.row)
         else {
             return UICollectionViewCell()
         }
         
-        cell.setupCell(level: level, progressPoints: progressPoints, totalPoints: totalPoints, progress: CGFloat(progress))
+        cell.setupCell(level: level,
+                       progressPoints: progressPoints,
+                       totalPoints: totalPoints,
+                       progress: CGFloat(progress),
+                       accessible: accessible)
         
         if let imageData = presenter?.getImageData(atIndex: indexPath.row),
            let image = UIImage(data: imageData) {

@@ -71,6 +71,10 @@ class CoachPresenter: CoachPresenterInputable, CoachInteractorOutputable {
         return interactor?.getImageData(atIndex: index)
     }
     
+    func getAccessible(atIndex index: Int) -> Bool? {
+        getItem(atIndex: index)?.accessible
+    }
+    
     func getTitle() -> String? {
         return interactor?.fetchTitle()
     }
