@@ -60,6 +60,7 @@
 		1F9FD650257F422A003F3A03 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD64F257F422A003F3A03 /* ProgressView.swift */; };
 		1F9FD655257F5778003F3A03 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD654257F5778003F3A03 /* ProgressBarView.swift */; };
 		1F9FD65A257F5D64003F3A03 /* UIView+constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9FD659257F5D64003F3A03 /* UIView+constraints.swift */; };
+		1FD7DAF5257FE781000761E1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD7DAF4257FE781000761E1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		1F9FD64F257F422A003F3A03 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		1F9FD654257F5778003F3A03 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		1F9FD659257F5D64003F3A03 /* UIView+constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+constraints.swift"; sourceTree = "<group>"; };
+		1FD7DAF4257FE781000761E1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 		1F19A34825795945008225F3 /* StashCoach */ = {
 			isa = PBXGroup;
 			children = (
+				1FD7DAF4257FE781000761E1 /* Constants.swift */,
 				1F9FD65E257F5D6A003F3A03 /* Extensions */,
 				1F19A407257B45E7008225F3 /* Services */,
 				1F19C369257DF98D00001FBB /* Coach */,
@@ -572,6 +575,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F01DAD3257C248B00E1F219 /* CoachDataServiceInputable.swift in Sources */,
+				1FD7DAF5257FE781000761E1 /* Constants.swift in Sources */,
 				1F9FD655257F5778003F3A03 /* ProgressBarView.swift in Sources */,
 				1F19C34C257DF6D000001FBB /* CoachStarterInteractorInputable.swift in Sources */,
 				1F19A3D1257B3BE4008225F3 /* CoachInteractor.swift in Sources */,
