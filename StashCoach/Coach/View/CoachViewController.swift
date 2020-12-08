@@ -66,7 +66,7 @@ extension CoachViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let itemWidth: CGFloat = collectionView.bounds.width * AchievementCollectionViewCell.widthMultiple
-        let itemHeight: CGFloat = (collectionView.bounds.height / 3) * AchievementCollectionViewCell.heightMultiple
+        let itemHeight: CGFloat = itemWidth * AchievementCollectionViewCell.heightMultiple
         
         return CGSize(width: itemWidth, height: itemHeight)
     }

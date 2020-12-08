@@ -28,12 +28,14 @@ class ProgressView: UIView {
         
         progressPointsLabel.text = points
         setupPointsLabel(progressPointsLabel)
+        progressPointsLabel.textAlignment = .left
         addProgressPointsLabelConstraints(progressPointsLabel)
     }
     
     private func addTotalPointsLabel(totalPoints: String) {
         totalPointsLabel.text = totalPoints
         setupPointsLabel(totalPointsLabel)
+        totalPointsLabel.textAlignment = .right
         addTotalPointsLabelConstraints(totalPointsLabel)
     }
     
@@ -74,7 +76,9 @@ class ProgressView: UIView {
             view.trailingAnchor.constraint(equalTo: trailingAnchor),
             view.centerXAnchor.constraint(equalTo: centerXAnchor),
             view.topAnchor.constraint(equalTo: topAnchor),
-            view.bottomAnchor.constraint(equalTo: progressPointsLabel.topAnchor, constant: -10)
+            view.bottomAnchor.constraint(equalTo: progressPointsLabel.topAnchor, constant: -10),
+            view.bottomAnchor.constraint(equalTo: totalPointsLabel.topAnchor, constant: -10),
+            view.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.2)
         ])
     }
     

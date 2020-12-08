@@ -43,7 +43,7 @@ class ProgressBarView: UIView {
         let progressPath = UIBezierPath(roundedRect: progressRect, cornerRadius: rect.height * roundingMultiple)
         
         progressLayer.path = progressPath.cgPath
-        progressLayer.fillColor = UIColor.green.cgColor
+        progressLayer.fillColor = Constants.Colors.progressGreen.color().cgColor
         layer.addSublayer(progressLayer)
         
     }

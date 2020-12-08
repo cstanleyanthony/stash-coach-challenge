@@ -16,7 +16,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
     /// Set the width to be a percent of the parent view
     static let widthMultiple: CGFloat = 0.85
     /// Set the height to be a percent of the the parent view
-    static let heightMultiple: CGFloat = 0.75
+    static let heightMultiple: CGFloat = 0.6
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -111,7 +111,7 @@ class AchievementCollectionViewCell: UICollectionViewCell {
             view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
             view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15),
             view.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            view.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.2)
+            view.topAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -60)
         ])
     }
     
