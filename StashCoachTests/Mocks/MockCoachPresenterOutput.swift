@@ -15,4 +15,8 @@ class MockCoachPresenterOutput: CoachPresenterOutputable {
     func displayAchievements() {
         
     }
+    
+    func displayFailureAlert() {
+        
+    }
 }

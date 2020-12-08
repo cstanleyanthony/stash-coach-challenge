@@ -44,27 +44,29 @@ class LevelView: UIView {
     }
     
     private func addTitleLabel() {
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.text = "Level"
-        titleLabel.textAlignment = .center
         titleLabel.font = titleLabel.font.withSize(18)
-        titleLabel.numberOfLines = 0
-        titleLabel.adjustsFontSizeToFitWidth = true
-        titleLabel.minimumScaleFactor = 0.5
+        titleLabel.textColor = UIColor.black
+        setupLabel(titleLabel)
         addSubview(titleLabel)
         addTitleLabelConstraints(titleLabel)
     }
     
     private func addLevelLabel(level: String) {
-        levelLabel.translatesAutoresizingMaskIntoConstraints = false
         levelLabel.text = level
-        levelLabel.textAlignment = .center
         levelLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 60)
-        levelLabel.numberOfLines = 0
-        levelLabel.minimumScaleFactor = 0.5
-        levelLabel.adjustsFontSizeToFitWidth = true
+        setupLabel(levelLabel)
         addSubview(levelLabel)
         addLevelLabelConstraints(levelLabel)
+    }
+    
+    private func setupLabel(_ label: UILabel) {
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.5
+        label.textColor = UIColor.black
     }
     
     func addTitleLabelConstraints(_ view: UIView) {
