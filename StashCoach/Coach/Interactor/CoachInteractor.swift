@@ -55,7 +55,7 @@ class CoachInteractor: CoachInteractorInputable, CoachRemoteDataServiceOutputabl
             LoggerService.log(category: loggerCategory, message: "Failed to decode achievements data:", value: err.localizedDescription)
             presenter?.failedFetchingAchievements()
         }
-        
+
         do {
             let overview = try JSONDecoder().decode(Overview.self, from: data)
             self.overview = overview.overview

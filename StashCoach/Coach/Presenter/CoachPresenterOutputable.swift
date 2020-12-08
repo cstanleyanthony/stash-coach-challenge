@@ -9,4 +9,5 @@ protocol CoachPresenterOutputable: class {
     
     var presenter: CoachPresenterInputable? { get set }
     func displayAchievements()
+    func displayFailureAlert()
 }

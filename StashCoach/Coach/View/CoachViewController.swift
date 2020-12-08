@@ -64,6 +64,13 @@ class CoachViewController: CustomizedViewController, CoachPresenterOutputable {
     func displayAchievements() {
         collectionView?.reloadData()
     }
+    
+    func displayFailureAlert() {
+        let alert = UIAlertController(title: "Error", message: "There was an issue loading your achievements.", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
 
 }
 
